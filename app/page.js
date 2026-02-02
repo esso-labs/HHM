@@ -87,10 +87,7 @@ export default function Home() {
       >
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
           <Typography variant="h2" component="h1" sx={{ fontWeight: 'bold', mb: 2, fontSize: { xs: '2rem', md: '3.5rem' } }}>
-            Handwerk, auf das Sie sich verlassen können.
-          </Typography>
-          <Typography variant="h5" sx={{ mb: 3, fontSize: { xs: '1rem', md: '1.5rem' }, fontWeight: 300 }}>
-            Fachgerechte Montage, Reparatur und Service – pünktlich, sauber, zuverlässig.
+            Möbelmontage und Service
           </Typography>
           <Typography variant="body1" sx={{ mb: 4, maxWidth: 600, mx: 'auto', fontSize: { xs: '0.95rem', md: '1.1rem' } }}>
             In Gronau und Umgebung (bis 150 km).
