@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #0765d4;
   --foreground: #171717;
 }
 
@@ -27,7 +27,7 @@ body {
 
 :root{
   --accent: #ff6f00;
-  --primary: #1a237e;
+  --primary: #1b5e20;
 }
 
 /* Hero gradient and card/ui helpers */
@@ -89,4 +89,57 @@ body {
 
 /* Badges/Steps backgrounds to match page contrast */
 .howit-bg{ background: linear-gradient(180deg, #fff, #fafafa); }
+
+/* global section padding to mirror the source site */
+.section {
+  padding: 80px 0;
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+}
+
+h2 {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* navigation links */
+.nav-link {
+  color: black;
+  text-transform: none;
+  font-weight: 600;
+  padding: 8px 12px;
+}
+.nav-link:hover {
+  background: rgba(255,255,255,0.2);
+  border-radius: 4px;
+}
+
+/* top info bar style */
+.top-bar {
+  background: #ccf15f;
+  color: black;
+  font-size: 0.875rem;
+  padding: 4px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* footer link tweaks */
+footer a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
 

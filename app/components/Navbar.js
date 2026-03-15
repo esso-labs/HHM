@@ -16,12 +16,15 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const sections = [
-  { id: 'start', label: 'Start' },
-  { id: 'leistungen', label: 'Leistungen' },
-  { id: 'about', label: 'Über uns' },
-  { id: 'contact', label: 'Kontakt' },
+  { id: 'reinigung', label: 'Reinigung' },
+  { id: 'umzuege', label: 'Umzüge' },
+  { id: 'wir', label: 'Wir' },
+  { id: 'bewertungen', label: 'Bewertungen' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'projekte', label: 'Projekte' },
 ];
 
 const scrollToSection = (id) => {
@@ -43,6 +46,7 @@ export default function Navbar() {
         {sections.map((section) => (
           <ListItem key={section.id} disablePadding>
             <ListItemButton
+              className="nav-link"
               onClick={() => {
                 scrollToSection(section.id);
                 setMobileOpen(false);
@@ -58,7 +62,18 @@ export default function Navbar() {
 
   return (
     <>
-      <AppBar position="sticky" sx={{ backgroundColor: '#1a237e' }}>
+      {/* top info bar */}
+      <AppBar 
+        position="absolute" 
+        suppressHydrationWarning
+        sx={{ 
+          backgroundColor: '#ccf15f',
+          borderRadius: '16px',
+          maxWidth: '70%',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          top: 26,
+        }}>
         <Toolbar>
           <Box
             component="img"
@@ -68,26 +83,31 @@ export default function Navbar() {
               height: { xs: 60, md: 45 },
               cursor: 'pointer',
               marginRight: 2,
+              mt: { xs: 0, md: 0.5 }
             }}
             onClick={() => scrollToSection('start')}
           />
 
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 3, flex: 1, justifyContent: 'right' }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 3, flex: 1, justifyContent: 'right', alignItems: 'center' }}>
             {sections.map((section) => (
               <Button
                 key={section.id}
-                color="inherit"
+                className="nav-link"
+                sx={{ color: 'black' }}
                 onClick={() => scrollToSection(section.id)}
-                sx={{
-                  '&:hover': {
-                    backgroundColor: 'rgba(255,255,255,0.2)',
-                    borderRadius: 1,
-                  },
-                }}
               >
                 {section.label}
               </Button>
             ))}
+            <Button
+              variant="contained"
+              href="https://wa.me/49176475615"
+              target="_blank"
+              sx={{ backgroundColor: '#0765d4', color: 'white', '&:hover': { backgroundColor: '#0552a8' }, fontWeight: 'bold', px: 3, py: 1, ml: 2 }}
+              endIcon={<ArrowForwardIcon />}
+            >
+              Jetzt anfragen
+            </Button>
           </Box>
 
           <IconButton
@@ -102,7 +122,6 @@ export default function Navbar() {
 
       <Drawer anchor="right" open={mobileOpen} onClose={handleDrawerToggle}>
         {drawerContent}
-      </Drawer>
-    </>
+      </Drawer>    </>
   );
 }
