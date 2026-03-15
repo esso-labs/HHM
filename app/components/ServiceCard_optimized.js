@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo } from 'react';
+import React from 'react';
 import {
   Box,
   Typography,
@@ -45,17 +45,6 @@ const DETAIL_ITEM_VARIANTS = {
   show: { opacity: 1, x: 0 },
 };
 
-const CONTAINER_VARIANTS = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.2,
-    },
-  },
-};
-
 const SPRING_TRANSITION = { type: 'spring', stiffness: 300, damping: 20 };
 const EASE_TRANSITION = { duration: 0.3 };
 
@@ -65,19 +54,17 @@ export default function ServiceCard({ service }) {
 
   return (
     <MotionBox
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      variants={cardVariants}
+      variants={CARD_VARIANTS}
       initial="initial"
       whileHover="hover"
-      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+      transition={SPRING_TRANSITION}
       sx={{
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
         borderRadius: '20px',
         overflow: 'hidden',
-        background: '#272727',
+        background: '#ffffff',
         boxShadow: '0 8px 24px rgba(0, 0, 0, 0.08)',
         transition: 'box-shadow 0.3s ease',
         border: '1px solid rgba(200, 200, 200, 0.2)',
@@ -88,7 +75,10 @@ export default function ServiceCard({ service }) {
       }}
     >
       {/* Icon Section */}
-      <Box
+      <MotionBox
+        variants={ICON_VARIANTS}
+        initial="initial"
+        whileHover="hover"
         sx={{
           display: 'flex',
           justifyContent: 'center',
@@ -98,29 +88,23 @@ export default function ServiceCard({ service }) {
           zIndex: 2,
         }}
       >
-        <motion.div
-          variants={iconVariants}
-          initial="initial"
-          whileHover="hover"
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: 90,
+            height: 90,
+            borderRadius: '18px',
+            background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, #283593 100%)`,
+            color: 'white',
+            boxShadow: '0 10px 30px rgba(26, 35, 126, 0.3)',
+            backdropFilter: 'blur(10px)',
+          }}
         >
-          <Box
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: 90,
-              height: 90,
-              borderRadius: '18px',
-              background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, #283593 100%)`,
-              color: 'white',
-              boxShadow: '0 10px 30px rgba(26, 35, 126, 0.3)',
-              backdropFilter: 'blur(10px)',
-            }}
-          >
-            <IconComponent sx={{ fontSize: 48, color: 'white' }} />
-          </Box>
-        </motion.div>
-      </Box>
+          <IconComponent sx={{ fontSize: 48, color: 'white' }} />
+        </Box>
+      </MotionBox>
 
       {/* Content Section */}
       <Box
@@ -135,10 +119,10 @@ export default function ServiceCard({ service }) {
       >
         {/* Title & Description (Hide on Hover) */}
         <MotionBox
-          variants={contentVariants}
+          variants={CONTENT_VARIANTS}
           initial="initial"
           whileHover="hover"
-          transition={{ duration: 0.3 }}
+          transition={EASE_TRANSITION}
         >
           <Typography
             variant="h6"
@@ -168,48 +152,47 @@ export default function ServiceCard({ service }) {
 
         {/* Features List (Show on Hover) */}
         <MotionBox
-          variants={detailsVariants}
+          variants={DETAILS_VARIANTS}
           initial="initial"
           whileHover="hover"
-          transition={{ duration: 0.3 }}
+          transition={EASE_TRANSITION}
           sx={{
             flexGrow: 1,
             display: 'flex',
             flexDirection: 'column',
+            gap: '10px',
           }}
         >
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileHover="show"
-            style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}
-          >
-            {service.details &&
-              service.details.map((detail, idx) => (
-                <motion.div key={idx} variants={detailItemVariants}>
-                  <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1 }}>
-                    <CheckCircleIcon
-                      sx={{
-                        color: theme.palette.secondary.main,
-                        fontSize: 20,
-                        mt: 0.3,
-                        flexShrink: 0,
-                      }}
-                    />
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        color: '#555',
-                        fontSize: { xs: '0.85rem', md: '0.9rem' },
-                        lineHeight: 1.5,
-                      }}
-                    >
-                      {detail}
-                    </Typography>
-                  </Box>
-                </motion.div>
-              ))}
-          </motion.div>
+          {service.details &&
+            service.details.map((detail, idx) => (
+              <motion.div
+                key={idx}
+                variants={DETAIL_ITEM_VARIANTS}
+                initial="hidden"
+                whileHover="show"
+              >
+                <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1 }}>
+                  <CheckCircleIcon
+                    sx={{
+                      color: theme.palette.secondary.main,
+                      fontSize: 20,
+                      mt: 0.3,
+                      flexShrink: 0,
+                    }}
+                  />
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: '#555',
+                      fontSize: { xs: '0.85rem', md: '0.9rem' },
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    {detail}
+                  </Typography>
+                </Box>
+              </motion.div>
+            ))}
         </MotionBox>
       </Box>
 
@@ -245,12 +228,13 @@ export default function ServiceCard({ service }) {
                 background: `linear-gradient(135deg, #1a237e 0%, ${theme.palette.primary.main} 100%)`,
                 boxShadow: '0 12px 30px rgba(26, 35, 126, 0.35)',
               }}
-            }
+            }}
           >
             Anfrage stellen
             <motion.div
-              animate={isHovered ? { x: 4 } : { x: 0 }}
-              transition={{ duration: 0.3 }}
+              initial={{ x: 0 }}
+              whileHover={{ x: 4 }}
+              transition={EASE_TRANSITION}
             >
               <ArrowForwardIcon sx={{ fontSize: 18 }} />
             </motion.div>

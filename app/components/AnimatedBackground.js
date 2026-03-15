@@ -55,7 +55,7 @@ export default function AnimatedBackground() {
         left: 0,
         right: 0,
         bottom: 0,
-        background: 'linear-gradient(135deg, #0d6e3b 0%, #1b8f4a 25%, #2ba854 50%, #1b8f4a 75%, #0d6e3b 100%)',
+        background: 'linear-gradient(135deg, #0765d4 0%, #0a4ba8 25%, #0d3d80 50%, #0a4ba8 75%, #0765d4 100%)',
         overflow: 'hidden',
         zIndex: 0,
       }}

@@ -49,7 +49,7 @@ export default function PartnersSection() {
         </Box>
 
         {/* Partner Logos Grid */}
-        <Grid container spacing={{ xs: 3, md: 4 }} sx={{ alignItems: 'center', justifyContent: 'center' }}>
+        <Grid container spacing={{ xs: 3, md: 5 }} sx={{ alignItems: 'center', justifyContent: 'center' }}>
           {partners.map((partner, idx) => (
             <Grid item xs={12} sm={6} md={4} key={idx}>
               <MotionBox

@@ -46,51 +46,13 @@ function CardWithGlow({ service, idx }) {
       onMouseLeave={handleMouseLeave}
       sx={{
         position: 'relative',
-        maxWidth: 345,
+        maxWidth: 500,
         mx: 'auto',
-        height: 450,
+        my: 2,
+        height: 480,
         perspective: '1000px',
       }}
     >
-      {/* Outer Glow Layer 1 - Pulse */}
-      <motion.div
-        animate={isHovered ? { scale: [1, 1.15, 1] } : { scale: 1 }}
-        transition={{ duration: 2, repeat: isHovered ? Infinity : 0, ease: 'easeInOut' }}
-        style={{
-          position: 'absolute',
-          inset: -15,
-          borderRadius: '12px',
-          background: 'radial-gradient(circle, rgba(78, 205, 196, 0.3) 0%, transparent 70%)',
-          pointerEvents: 'none',
-          zIndex: 0,
-        }}
-      />
-
-      {/* Outer Glow Layer 2 - Shimmer Border */}
-      <motion.div
-        animate={
-          isHovered
-            ? {
-                boxShadow: [
-                  '0 0 25px rgba(78, 205, 196, 0.5)',
-                  '0 0 40px rgba(26, 144, 255, 0.6)',
-                  '0 0 25px rgba(78, 205, 196, 0.5)',
-                ],
-              }
-            : {
-                boxShadow: '0 0 0px rgba(0, 0, 0, 0)',
-              }
-        }
-        transition={{ duration: 3, repeat: isHovered ? Infinity : 0, ease: 'easeInOut' }}
-        style={{
-          position: 'absolute',
-          inset: -2,
-          borderRadius: '12px',
-          pointerEvents: 'none',
-          zIndex: 1,
-        }}
-      />
-
       {/* Card Content */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8, y: 50, rotateX: 0, rotateY: 0 }}
@@ -115,7 +77,7 @@ function CardWithGlow({ service, idx }) {
       >
         <Card
           sx={{
-            backgroundColor: 'rgb(209, 209, 209)',
+            backgroundColor: '#272727',
             height: '100%',
             display: 'flex',
             flexDirection: 'column',
@@ -151,7 +113,7 @@ function CardWithGlow({ service, idx }) {
               variant="h6"
               sx={{
                 fontWeight: 'bold',
-                color: 'black',
+                color: 'white',
                 mb: 0,
               }}
             >
@@ -194,7 +156,7 @@ export default function ReinigungSection() {
               transition={{ duration: 0.3 }}
             >
               <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.3em' }}>
-                {'Professionelle Umzüge & Reinigung'.split('').map((char, idx) => (
+                {'Professionelle Möbel- & Küchenmontage in Gronau & Umgebung'.split('').map((char, idx) => (
                   <motion.span
                     key={idx}
                     initial={{ opacity: 0, y: 30, rotateX: -90 }}
@@ -265,7 +227,8 @@ export default function ReinigungSection() {
               letterSpacing: '0.5px',
             }}
           >
-            Deutschlandweit zuverlässig unterwegs
+            Wir montieren Ihre Möbel und Küchen zuverlässig, sauber und termingerecht – auch Umzugsküchen oder kleine Reparaturen wie Türen einstellen gehören zu unserem Service.
+Einsatzgebiet: Gronau und Umgebung bis 150 km.
           </MotionTypography>
 
           {/* Features List */}
@@ -320,9 +283,9 @@ export default function ReinigungSection() {
         </MotionBox>
 
         {/* Cleaning Services Grid */}
-        <Grid container spacing={3}>
+        <Grid container spacing={{ xs: 3, md: 5 }} sx={{ justifyContent: 'center' }}>
           {cleaningServices.map((s, idx) => (
-            <Grid size={{ xs: 12, sm: 6, md: 2 }} key={idx}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }} key={idx}>
               <CardWithGlow service={s} idx={idx} />
             </Grid>
           ))}
