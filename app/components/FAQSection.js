@@ -33,8 +33,8 @@ const faqData = [
     answer: 'Ja, wir richten bei jedem Umzug eine Halteverbotszone ein, um sicherzustellen, dass Ihr Umzug reibungslos und ohne Verzögerungen durchgeführt werden kann. In einigen Fällen ist die Einrichtung einer Halteverbotszone möglicherweise nicht erforderlich.'
   },
   {
-    question: 'Welche Vorteile habe ich bei MMS-Gronau Umzüge?',
-    answer: 'Mit MMS-Gronau Umzug Service sind Sie bestens aufgehoben! Wir kümmern uns um Ihren Umzug, als wäre es unser eigener. Sie profitieren von unserer Erfahrung, Sorgfalt und einem eingespielten Team, das genau weiß, wie man anpackt. Kostenlose Beratung, Angebotserstellung und Besichtigungen? Gibt\'s bei uns natürlich dazu! Und keine Sorge – Ihr Hab und Gut ist bei uns zu 100% versichert. Wir geben alles, um Ihnen den Umzug so entspannt wie möglich zu machen. Melden Sie sich einfach, wir sind für Sie da!'
+    question: 'Welche Vorteile habe ich bei Handwerker & Montage Hundsbuscher?',
+    answer: 'Mit Handwerker & Montage Hundsbuscher sind Sie bestens aufgehoben. Wir planen Ihren Umzug strukturiert, arbeiten sorgfaeltig und setzen alles termingerecht um. Sie profitieren von transparenter Beratung, fairen Angeboten und einem erfahrenen Team. Selbstverstaendlich ist Ihr Umzugsgut waehrend des Einsatzes versichert. Unser Ziel: ein reibungsloser Umzug ohne Stress.'
   }
 ];
 
@@ -81,7 +81,7 @@ export default function FAQSection() {
           >
             Alles was Sie wissen müssen
           </Typography>
-          <Box sx={{ height: 4, width: 120, background: 'linear-gradient(90deg, #ff6b6b, #4ecdc4, #1a90ff)', borderRadius: 2 }} />
+          <Box sx={{ height: 4, width: 120, background: 'linear-gradient(90deg, #0765d4, #2e8cff, #7cb5ff)', borderRadius: 2 }} />
         </MotionBox>
 
         {/* FAQ Accordion */}

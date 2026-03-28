@@ -13,7 +13,7 @@ export default function AboutSection() {
       className="section" 
       sx={{ 
         py: { xs: 8, md: 12 },
-        background: 'linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%)',
+        background: 'linear-gradient(135deg, #0f172a 0%, #182742 100%)',
         color: '#ffffff',
         position: 'relative',
         overflow: 'hidden'
@@ -30,7 +30,7 @@ export default function AboutSection() {
         >
           <Box sx={{ width: 8, height: 8, borderRadius: '50%', background: '#ffffff' }} />
           <Typography sx={{ fontSize: '0.85rem', fontWeight: '700', letterSpacing: 1.5, color: '#ffffff' }}>
-            ÜBER MMS-GRONAU
+            UEBER HANDWERKER & MONTAGE HUNDSBUSCHER
           </Typography>
         </MotionBox>
 
@@ -58,7 +58,7 @@ export default function AboutSection() {
                   }
                 }}
               >
-                Ein Familienunternehmen durch und durch, das es sich zum Ziel gesetzt hat, mit seinem exzellenten Service zu überzeugen.
+                Ein starkes Handwerks- und Montageteam, das mit praeziser Arbeit, klarer Kommunikation und verlaesslichem Service ueberzeugt.
               </Typography>
             </MotionBox>
           </Box>
@@ -73,11 +73,11 @@ export default function AboutSection() {
             >
               {/* Block 1 */}
               <Box sx={{ mb: 5 }}>
-                <Typography sx={{ fontSize: '0.9rem', fontWeight: 600, color: '#ff6b6b', mb: 1.5, letterSpacing: 0.5 }}>
-                  MMS-GRONAU
+                <Typography sx={{ fontSize: '0.9rem', fontWeight: 600, color: '#8fc3ff', mb: 1.5, letterSpacing: 0.5 }}>
+                  HANDWERKER & MONTAGE HUNDSBUSCHER
                 </Typography>
                 <Typography sx={{ fontSize: { xs: '0.95rem', md: '1rem' }, lineHeight: 1.7, color: 'rgba(255,255,255,0.95)' }}>
-                  Ihr zuverlässiger Partner für Umzüge und Reinigungen mit Hauptsitz in Gronau, Westfalen. Wir sind stolz darauf, in den zwei Nischenbereichen Umzüge und Reinigungen tätig zu sein. In einer Branche, in der Zuverlässigkeit und Qualität entscheidend sind, setzen wir alles daran, Ihre Erwartungen zu übertreffen.
+                  Ihr zuverlaessiger Partner fuer Umzuege, Montagearbeiten und Reinigungen. Wir verbinden alle Leistungen in einem klaren Serviceversprechen: termintreu, gruendlich und transparent.
                 </Typography>
               </Box>
 
@@ -87,7 +87,7 @@ export default function AboutSection() {
                   UMZÜGE – PRIVAT UND GEWERBLICH
                 </Typography>
                 <Typography sx={{ fontSize: { xs: '0.95rem', md: '1rem' }, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)' }}>
-                  Unser Umzugsservice deckt ein breites Spektrum ab. Egal, ob Sie privat umziehen oder einen großen Gewerbeurwang in ganz Deutschland planen, wir sind Ihr vertrauenswürdiger Partner. Wir verstehen, dass ein Umzug mit all Stress und Unsicherheiten verbunden ist. Deshalb stehen wir Ihnen von der Planung bis zur Umsetzung im Raf und Tat zur Seite. Unser erfahrenes Team kümmert sich um jedes Detail, damit Ihr Umzug reibungslos und effizient abläuft. Mit moderner Technik und einem gut ausgestatteten Fuhrpark garantieren wir, dass Ihre Möbel und Habseligkeiten sicher an Ihr Ziel gelangen.
+                  Unser Umzugsservice deckt ein breites Spektrum ab. Egal, ob privater Wohnungswechsel oder grosser Firmenumzug in Deutschland: Wir planen jeden Schritt mit Ihnen gemeinsam. Unser erfahrenes Team kuemmert sich um jedes Detail, damit Ihr Umzug reibungslos und effizient ablaeuft.
                 </Typography>
               </Box>
 
@@ -97,17 +97,17 @@ export default function AboutSection() {
                   REINIGUNGEN IM MÜNSTERLAND – QUALITÄT ZUM SEHR FAIREN PREIS
                 </Typography>
                 <Typography sx={{ fontSize: { xs: '0.95rem', md: '1rem' }, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)' }}>
-                  Neben Umzügen bieten wir auch einen erstklassigen Reinigungsservice an, der sich speziell auf das Münsterland konzentriert. Hier legen wir großen Wert darauf, Ihnen zu einem fairen Preis eine Top-Leistung zu garantieren. Unsere Reinigungsdienstleistungen reichen von grundlichen Fensterreinigungen über die Pflege von Wohnblümen bis hin zu professionellen Reinigungen für Hotels, Kinos und Restaurants. Wir wissen, dass Sauberkeit und Hygiene in der Gastronomie und im Gastgewerbe unerlässlich sind. Daher stellen wir sicher, dass jede Reinigung höchste Standards erfüllt.
+                  Neben Umzuegen bieten wir einen erstklassigen Reinigungsservice im Muensterland. Von Fenster- und Unterhaltsreinigung bis zu anspruchsvollen Gewerbeflaechen liefern wir saubere Ergebnisse mit messbarer Qualitaet. Dabei achten wir auf faire Preise und verlaessliche Einsaetze.
                 </Typography>
               </Box>
 
               {/* Block 4 */}
               <Box>
                 <Typography sx={{ fontSize: '0.9rem', fontWeight: 600, color: '#ffffff', mb: 1.5, letterSpacing: 0.5 }}>
-                  WARUM MMS-GRONAU?
+                  WARUM HANDWERKER & MONTAGE HUNDSBUSCHER?
                 </Typography>
                 <Typography sx={{ fontSize: { xs: '0.95rem', md: '1rem' }, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)' }}>
-                  Bei MMS-Gronau stehen Ihre Bedürfnisse im Mittelpunkt. Unser Team zeichnet sich durch Fachwissen, Engagement und ein hohes Maß an Kundensorientierung aus. Wir setzen auf Transparenz und faire Preise, sodass Sie genau wissen, welche Leistungen Sie erwarten können. Mit uns entscheiden Sie sich für einen Partner, der Wert auf Qualität und Zuverlässigkeit legt. Lassen Sie sich von unserem umfassenden Serviceangebot überzeugen. Kontaktieren Sie uns noch heute und erfahren Sie, wie wir Ihnen bei Ihrem nächsten Umzug oder Ihrer nächsten Reinigung helfen können. MMS-Gronau – für ein Zuhause, in dem Sie sich wohlfühlen!
+                  Bei Handwerker & Montage Hundsbuscher stehen Ihre Beduerfnisse im Mittelpunkt. Wir arbeiten loesungsorientiert, kommunizieren klar und halten Zusagen ein. So erhalten Sie einen Partner, auf den Sie sich bei jedem Projekt verlassen koennen.
                 </Typography>
               </Box>
             </MotionBox>

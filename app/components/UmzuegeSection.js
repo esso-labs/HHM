@@ -1,100 +1,135 @@
 'use client';
 
 import React from 'react';
-import { Box, Container, Typography, Grid } from '@mui/material';
+import { Box, Container, Typography, Grid, Button } from '@mui/material';
 import { motion } from 'framer-motion';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-const partners = [
-  { name: 'Partner 1', logo: 'https://via.placeholder.com/150x80?text=Partner+1' },
-  { name: 'Partner 2', logo: 'https://via.placeholder.com/150x80?text=Partner+2' },
-  { name: 'Partner 3', logo: 'https://via.placeholder.com/150x80?text=Partner+3' },
-  { name: 'Partner 4', logo: 'https://via.placeholder.com/150x80?text=Partner+4' },
-  { name: 'Partner 5', logo: 'https://via.placeholder.com/150x80?text=Partner+5' },
-  { name: 'Partner 6', logo: 'https://via.placeholder.com/150x80?text=Partner+6' },
+const moveServices = [
+  {
+    title: 'Privatumzug',
+    image: '/img/umzug.jpg',
+    description: 'Sorgfaeltige Planung, sicherer Transport und ein Team, das mitdenkt.',
+    points: ['Packservice auf Wunsch', 'Moebelmontage inklusive', 'Stressfrei bis zur Uebergabe'],
+  },
+  {
+    title: 'Firmenumzug',
+    image: '/img/banner.png',
+    description: 'Effiziente Umzuege fuer Bueros und Gewerbe mit minimaler Ausfallzeit.',
+    points: ['Klare Ablaufplanung', 'Wochenend-Termine moeglich', 'Diskret und zuverlaessig'],
+  },
+  {
+    title: 'Fernumzug',
+    image: '/img/background22.jpg',
+    description: 'Bundesweite Einsaetze mit transparentem Ablauf und fester Betreuung.',
+    points: ['Deutschlandweit verfuegbar', 'Versicherter Transport', 'Termintreu und puenktlich'],
+  },
 ];
 
-const MotionBox = motion(Box);
+const MotionBox = motion.create(Box);
 
-export default function PartnersSection() {
+export default function UmzuegeSection() {
   return (
-    <Box id="partners" className="section" sx={{ py: { xs: 6, md: 10 }, background: 'linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%)' }}>
-      <Container maxWidth="lg">
-        {/* Animated Title */}
-        <Box sx={{ textAlign: 'center', mb: 8 }}>
-          <MotionBox
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 2, mb: 4 }}>
-              <Box sx={{ width: 12, height: 12, borderRadius: '50%', background: '#1e3a8a', boxShadow: '0 0 20px rgba(30, 58, 138, 0.6)' }} />
-              <Typography sx={{ fontSize: '0.9rem', fontWeight: '700', color: '#1e3a8a', letterSpacing: 1 }}>
-                UNSERE KUNDEN
-              </Typography>
-            </Box>
-          </MotionBox>
-          
-          <MotionBox
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
-            <Typography variant="h3" sx={{ fontWeight: 'bold', fontSize: { xs: '1.8rem', md: '2.5rem' }, color: '#0f172a', mb: 2 }}>
-              Vertrauen Sie uns genauso wie unsere Partner
-            </Typography>
-            <Box sx={{ height: 36, width: 800, background: 'linear-gradient(90deg, #ff6b6b, #4ecdc4, #1a90ff)', borderRadius: 2, mx: 'auto' }} />
-          </MotionBox>
-        </Box>
+    <Box
+      id="umzuege"
+      className="section"
+      sx={{
+        py: { xs: 7, md: 11 },
+        background: 'linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%)',
+      }}
+    >
+      <Container maxWidth="xl">
+        <MotionBox
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55 }}
+          viewport={{ once: true }}
+          sx={{ textAlign: 'center', mb: { xs: 5, md: 7 } }}
+        >
+          <Typography sx={{ fontSize: '0.88rem', fontWeight: 800, letterSpacing: '0.12em', color: '#0765d4', mb: 1.4 }}>
+            UMZUGSSERVICE
+          </Typography>
+          <Typography sx={{ fontSize: { xs: '1.85rem', md: '2.8rem' }, fontWeight: 800, color: '#0f172a', lineHeight: 1.16, mb: 1.2 }}>
+            Umzuege mit Plan, Power und persoenlicher Betreuung
+          </Typography>
+          <Typography sx={{ maxWidth: 760, mx: 'auto', color: 'rgba(15,23,42,0.78)', fontSize: { xs: '1rem', md: '1.08rem' } }}>
+            Von der ersten Besichtigung bis zum letzten Karton: Wir organisieren Ihren Umzug effizient und sicher.
+          </Typography>
+        </MotionBox>
 
-        {/* Partner Logos Grid */}
-        <Grid container spacing={{ xs: 3, md: 5 }} sx={{ alignItems: 'center', justifyContent: 'center' }}>
-          {partners.map((partner, idx) => (
-            <Grid item xs={12} sm={6} md={4} key={idx}>
+        <Grid container spacing={{ xs: 2.5, md: 3.2 }}>
+          {moveServices.map((service, idx) => (
+            <Grid size={{ xs: 12, md: 4 }} key={service.title}>
               <MotionBox
-                initial={{ opacity: 0, scale: 0.8, y: 30 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ 
-                  type: 'spring', 
-                  stiffness: 300, 
-                  damping: 25, 
-                  delay: idx * 0.1 
-                }}
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.08 }}
                 viewport={{ once: true }}
-                whileHover={{ scale: 1.08, y: -5 }}
+                whileHover={{ y: -7 }}
                 sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: { xs: '24px 16px', md: '32px 24px' },
-                  borderRadius: '12px',
-                  background: 'white',
-                  border: '1px solid #e5e7eb',
-                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  '&:hover': {
-                    boxShadow: '0 12px 24px rgba(30, 58, 138, 0.15)',
-                    borderColor: '#1e3a8a',
-                  }
+                  height: '100%',
+                  background: '#fff',
+                  borderRadius: 4,
+                  overflow: 'hidden',
+                  border: '1px solid rgba(7,101,212,0.14)',
+                  boxShadow: '0 14px 36px rgba(8, 38, 84, 0.12)',
                 }}
               >
-                <Box
-                  component="img"
-                  src={partner.logo}
-                  alt={partner.name}
-                  sx={{
-                    maxWidth: '100%',
-                    height: 'auto',
-                    maxHeight: '80px',
-                    objectFit: 'contain',
-                  }}
-                />
+                <Box sx={{ position: 'relative', height: { xs: 220, md: 240 } }}>
+                  <Box
+                    component="img"
+                    src={service.image}
+                    alt={service.title}
+                    sx={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                  <Box
+                    sx={{
+                      position: 'absolute',
+                      inset: 0,
+                      background: 'linear-gradient(180deg, rgba(7,101,212,0.08), rgba(7,101,212,0.55))',
+                    }}
+                  />
+                </Box>
+
+                <Box sx={{ p: { xs: 2.4, md: 2.8 }, display: 'flex', flexDirection: 'column', gap: 1.35 }}>
+                  <Typography sx={{ fontSize: { xs: '1.25rem', md: '1.42rem' }, fontWeight: 800, color: '#0f172a' }}>
+                    {service.title}
+                  </Typography>
+                  <Typography sx={{ color: 'rgba(15,23,42,0.78)', lineHeight: 1.6 }}>
+                    {service.description}
+                  </Typography>
+                  {service.points.map((point) => (
+                    <Box key={point} sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                      <CheckCircleIcon sx={{ fontSize: 18, color: '#0765d4' }} />
+                      <Typography sx={{ fontSize: '0.93rem', color: '#0f172a', fontWeight: 600 }}>{point}</Typography>
+                    </Box>
+                  ))}
+                </Box>
               </MotionBox>
             </Grid>
           ))}
         </Grid>
+
+        <Box sx={{ mt: { xs: 4, md: 5.5 }, textAlign: 'center' }}>
+          <Button
+            variant="contained"
+            href="https://wa.me/49176475615"
+            target="_blank"
+            endIcon={<ArrowForwardIcon />}
+            sx={{
+              px: 3.6,
+              py: 1.2,
+              borderRadius: '999px',
+              background: '#0765d4',
+              fontWeight: 700,
+              boxShadow: '0 12px 28px rgba(7, 101, 212, 0.3)',
+              '&:hover': { background: '#0552a8' },
+            }}
+          >
+            Umzug jetzt anfragen
+          </Button>
+        </Box>
       </Container>
     </Box>
   );

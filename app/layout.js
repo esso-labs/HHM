@@ -18,9 +18,9 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "MMS-Gronau – Umzüge & Reinigungen in Münsterland",
-  description: "Professionelle Umzüge & Reinigungen deutschlandweit; lokal im Münsterland – zuverlässig und kompetent.",
-  keywords: "Umzüge, Reinigungsservice, Gronau, Münsterland, PV-Reinigung, Fensterreinigung, Entrümpelung",
+  title: "Handwerker & Montage Hundsbuscher – Umzüge und Reinigungen",
+  description: "Professionelle Umzuege und Reinigungen mit Handwerker & Montage Hundsbuscher: zuverlaessig, termintreu und sauber umgesetzt.",
+  keywords: "Handwerker und Montage Hundsbuscher, Umzuege, Reinigungsservice, PV-Reinigung, Fensterreinigung, Entruempelung",
 };
 
 import ThemeProviderWrapper from './components/ThemeProviderWrapper';

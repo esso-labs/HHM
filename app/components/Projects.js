@@ -11,31 +11,31 @@ const projects = [
     number: '1',
     title: 'Freie Bahn für das Sonnelicht',
     description: 'Unsere gründliche PV-Anlage Reinigung sorgt für maximale Energieeffizienz und optimalen Schutz.',
-    image: 'https://via.placeholder.com/600x400?text=Solaranlage'
+    image: '/img/anlage.jpg'
   },
   {
     number: '2',
     title: 'Entrümpelungen',
     description: 'Eine komplette Entrümpelung in Rekordzeit – wir schaffen Platz, wo Chaos war.',
-    image: 'https://via.placeholder.com/600x400?text=Entrümpelung'
+    image: '/img/coutch.jpg'
   },
   {
     number: '3',
     title: 'Glänzende Sanitärräume',
     description: 'Strahlende Sauberkeit in jedem Winkel – unsere Sanitärraum Reinigung setzt neue Hygienestandards.',
-    image: 'https://via.placeholder.com/600x400?text=Sanitär'
+    image: '/img/kuche.jpg'
   },
   {
     number: '4',
     title: 'Starke Umzugsfachmänner',
     description: 'Unser Team meisterte den Umzug schnell, stressfrei und professionell – Kundenzufriedenheit garantiert.',
-    image: 'https://via.placeholder.com/600x400?text=Umzug'
+    image: '/img/umzug.jpg'
   }
 ];
 
 export default function Projects() {
   return (
-    <Box id="projekte" className="section" sx={{ py: { xs: 6, md: 10 }, background: '#d4ff00' }}>
+    <Box id="projekte" className="section" sx={{ py: { xs: 7, md: 11 }, background: 'linear-gradient(180deg, #ebf4ff 0%, #f5f9ff 100%)' }}>
       <Container maxWidth="xl">
         {/* Header */}
         <MotionBox
@@ -45,8 +45,8 @@ export default function Projects() {
           viewport={{ once: true }}
           sx={{ mb: 4, display: 'flex', alignItems: 'center', gap: 1.5 }}
         >
-          <Box sx={{ width: 12, height: 12, borderRadius: '50%', background: '#1e3a8a', boxShadow: '0 0 20px rgba(30, 58, 138, 0.6)' }} />
-          <Typography sx={{ fontSize: '0.9rem', fontWeight: '700', letterSpacing: 1, color: '#000000' }}>
+          <Box sx={{ width: 12, height: 12, borderRadius: '50%', background: '#0765d4', boxShadow: '0 0 18px rgba(7, 101, 212, 0.45)' }} />
+          <Typography sx={{ fontSize: '0.9rem', fontWeight: '700', letterSpacing: 1, color: '#0f172a' }}>
             UNSERE PROJEKTE
           </Typography>
         </MotionBox>
@@ -64,7 +64,7 @@ export default function Projects() {
               fontSize: { xs: '1.8rem', md: '2.5rem', lg: '3rem' },
               fontWeight: 700,
               lineHeight: 1.3,
-              color: '#000000',
+              color: '#0f172a',
               mb: 2
             }}
           >
@@ -90,14 +90,14 @@ export default function Projects() {
                 sx={{
                   borderRadius: { xs: '12px', md: '16px' },
                   overflow: 'hidden',
-                  boxShadow: '0 10px 30px rgba(0, 0, 0, 0.15)',
+                  boxShadow: '0 14px 34px rgba(8, 38, 84, 0.14)',
                   backgroundColor: '#ffffff',
                   transition: 'all 0.3s ease',
                   height: '100%',
                   display: 'flex',
                   flexDirection: 'column',
                   '&:hover': {
-                    boxShadow: '0 20px 50px rgba(30, 58, 138, 0.25)'
+                    boxShadow: '0 24px 52px rgba(7, 101, 212, 0.24)'
                   }
                 }}
               >
@@ -117,7 +117,7 @@ export default function Projects() {
                 {/* Content Box - Dark Background */}
                 <Box
                   sx={{
-                    background: '#1f1f1f',
+                    background: 'linear-gradient(180deg, #0f172a 0%, #1c2e4f 100%)',
                     color: '#ffffff',
                     p: { xs: '20px', md: '28px' },
                     flex: 1,
@@ -134,7 +134,7 @@ export default function Projects() {
                           fontSize: { xs: '3rem', md: '4rem' },
                           fontWeight: 700,
                           lineHeight: 1,
-                          color: '#d4ff00'
+                          color: '#9fcfff'
                         }}
                       >
                         {project.number}

@@ -227,7 +227,7 @@ export default function ServiceCard({ service }) {
               '&:hover': {
                 background: `linear-gradient(135deg, #1a237e 0%, ${theme.palette.primary.main} 100%)`,
                 boxShadow: '0 12px 30px rgba(26, 35, 126, 0.35)',
-              }}
+              }
             }}
           >
             Anfrage stellen

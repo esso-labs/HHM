@@ -1,295 +1,143 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Box, Container, Typography, Grid, Card, CardContent, CardMedia, Button } from '@mui/material';
+import React from 'react';
+import { Box, Container, Typography, Grid, Button } from '@mui/material';
 import { motion } from 'framer-motion';
-import AnimatedBackground from './AnimatedBackground';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const MotionBox = motion.create(Box);
-const MotionTypography = motion.create(Typography);
-
-// Card Component with Glow Effect + 3D Tilt
-function CardWithGlow({ service, idx }) {
-  const [isHovered, setIsHovered] = useState(false);
-  const [rotateX, setRotateX] = useState(0);
-  const [rotateY, setRotateY] = useState(0);
-
-  const handleMouseMove = (e) => {
-    if (!isHovered) return;
-
-    const card = e.currentTarget;
-    const rect = card.getBoundingClientRect();
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-
-    // Calculate rotation based on mouse position
-    const rotationX = ((mouseY - centerY) / centerY) * 10;
-    const rotationY = ((centerX - mouseX) / centerX) * 10;
-
-    setRotateX(rotationX);
-    setRotateY(rotationY);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-    setRotateX(0);
-    setRotateY(0);
-  };
-
-  return (
-    <Box
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      sx={{
-        position: 'relative',
-        maxWidth: 500,
-        mx: 'auto',
-        my: 2,
-        height: 480,
-        perspective: '1000px',
-      }}
-    >
-      {/* Card Content */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8, y: 50, rotateX: 0, rotateY: 0 }}
-        whileInView={{ opacity: 1, scale: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        animate={{
-          rotateX: rotateX,
-          rotateY: rotateY,
-        }}
-        transition={{
-          opacity: { type: 'spring', stiffness: 300, damping: 20, delay: idx * 0.15, duration: 0.6 },
-          scale: { type: 'spring', stiffness: 300, damping: 20, delay: idx * 0.15, duration: 0.6 },
-          y: { type: 'spring', stiffness: 300, damping: 20, delay: idx * 0.15, duration: 0.6 },
-          rotateX: { type: 'spring', stiffness: 300, damping: 20 },
-          rotateY: { type: 'spring', stiffness: 300, damping: 20 },
-        }}
-        style={{
-          position: 'relative',
-          zIndex: 2,
-          transformStyle: 'preserve-3d',
-        }}
-      >
-        <Card
-          sx={{
-            backgroundColor: '#272727',
-            height: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-            cursor: 'pointer',
-            borderRadius: '12px',
-            overflow: 'hidden',
-            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-            transition: 'all 0.3s ease',
-          }}
-          onClick={() =>
-            window.open(
-              `https://wa.me/49123456789?text=Hallo, ich interessiere mich für ${service.title}. Kann ich mehr Informationen bekommen?`,
-              '_blank'
-            )
-          }
-        >
-          <CardMedia
-            component="img"
-            height="200"
-            image={service.image}
-            alt={service.title}
-          />
-          <CardContent
-            sx={{
-              flexGrow: 1,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <Typography
-              variant="h6"
-              sx={{
-                fontWeight: 'bold',
-                color: 'white',
-                mb: 0,
-              }}
-            >
-              {idx + 1}. {service.title}
-            </Typography>
-          </CardContent>
-        </Card>
-      </motion.div>
-    </Box>
-  );
-}
 
 const cleaningServices = [
-  { title: 'PV-Anlagenreinigung', image: '/img/anlage.jpg' },
-  { title: 'Glas & Fensterreinigung', image: '/img/glas.jpg' },
-  { title: 'Profi Entrümpelung', image: '/img/coutch.jpg' },
-  { title: 'Gewerbe- Büroreinigungen', image: '/img/kuche.jpg' },
-  { title: 'Teppichreinigung', image: '/img/teppich.jpg' },
-  { title: 'Hochdruckreinigung', image: '/img/umzug.jpg' },
+  {
+    title: 'PV-Anlagenreinigung',
+    image: '/img/anlage.jpg',
+    description: 'Leistungsstarke Reinigung fuer mehr Ertrag und laengere Lebensdauer Ihrer Anlage.',
+  },
+  {
+    title: 'Glas- und Fensterreinigung',
+    image: '/img/glas.jpg',
+    description: 'Streifenfrei, materialschonend und mit klaren Intervallen fuer private und gewerbliche Flaechen.',
+  },
+  {
+    title: 'Entruempelung und Grundreinigung',
+    image: '/img/coutch.jpg',
+    description: 'Von der Raeumung bis zur bezugsfertigen Flaeche, schnell organisiert und sauber umgesetzt.',
+  },
+  {
+    title: 'Buero- und Gewerbereinigung',
+    image: '/img/kuche.jpg',
+    description: 'Planbare Reinigungsablaeufe fuer Teams, Kundenbereiche und sensible Arbeitszonen.',
+  },
+  {
+    title: 'Teppich- und Polsterpflege',
+    image: '/img/teppich.jpg',
+    description: 'Schonende Tiefenreinigung fuer frische Oberflaechen und sichtbar bessere Hygiene.',
+  },
+  {
+    title: 'Hochdruck- und Aussenreinigung',
+    image: '/img/umzug.jpg',
+    description: 'Effektive Aussenreinigung fuer Wege, Einfahrten, Fassaden und stark beanspruchte Flaechen.',
+  },
 ];
 
 export default function ReinigungSection() {
   return (
-    <Box id="reinigung" className="section" sx={{ py: { xs: 6, md: 10 }, position: 'relative' }}>
-      <AnimatedBackground />
-      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
-        {/* Header Section with Animations */}
+    <Box
+      id="reinigung"
+      className="section"
+      sx={{
+        py: { xs: 7, md: 11 },
+        background: 'linear-gradient(180deg, #0d4ca8 0%, #0765d4 35%, #0f78f0 100%)',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
+      <Box
+        sx={{
+          position: 'absolute',
+          inset: 0,
+          background: 'radial-gradient(circle at 12% 18%, rgba(125, 182, 255, 0.3), transparent 40%), radial-gradient(circle at 84% 78%, rgba(255,255,255,0.18), transparent 40%)',
+        }}
+      />
+      <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
         <MotionBox
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.55 }}
           viewport={{ once: true }}
-          sx={{ mb: 8, textAlign: 'center' }}
+          sx={{ mb: { xs: 5, md: 7 }, textAlign: 'center' }}
         >
-          {/* Main Headline with Character Reveal + Gradient Animation */}
-          <Box sx={{ position: 'relative', mb: 2 }}>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.3em' }}>
-                {'Professionelle Möbel- & Küchenmontage in Gronau & Umgebung'.split('').map((char, idx) => (
-                  <motion.span
-                    key={idx}
-                    initial={{ opacity: 0, y: 30, rotateX: -90 }}
-                    animate={{ 
-                      opacity: 1, 
-                      y: 0, 
-                      rotateX: 0,
-                    }}
-                    transition={{ 
-                      delay: idx * 0.03, 
-                      duration: 0.5,
-                      repeat: Infinity,
-                      repeatDelay: 10,
-                      repeatType: 'reverse',
-                    }}
-                    style={{
-                      display: 'inline-block',
-                      fontWeight: 800,
-                      fontSize: 'clamp(2rem, 5vw, 7rem)',
-                      color: '#ffffff',
-                      background: 'linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%)',
-                      backgroundClip: 'text',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                      perspective: '1000px',
-                      transformStyle: 'preserve-3d',
-                    }}
-                  >
-                    {char === ' ' ? '\u00A0' : char}
-                  </motion.span>
-                ))}
-              </Box>
-            </motion.div>
-
-            {/* Animated Gradient Underline */}
-            <motion.div
-              initial={{ scaleX: 0, opacity: 0 }}
-              animate={{ scaleX: 1, opacity: 1 }}
-              transition={{ 
-                duration: 1, 
-                delay: 0.8,
-                repeat: Infinity,
-                repeatDelay: 10,
-                repeatType: 'reverse',
-              }}
-              style={{
-                height: '36px',
-                background: 'linear-gradient(90deg, #ff6b6b 0%, #4ecdc4 50%, #1a90ff 100%)',
-                borderRadius: '3px',
-                marginTop: '16px',
-                transformOrigin: 'left',
-              }}
-            />
-          </Box>
-
-          {/* Subtitle */}
-          <MotionTypography
-            variant="h6"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            sx={{
-              color: '#b3e5fc',
-              fontSize: { xs: '1.1rem', md: '1.3rem' },
-              fontWeight: 300,
-              mb: 4,
-              letterSpacing: '0.5px',
-            }}
-          >
-            Wir montieren Ihre Möbel und Küchen zuverlässig, sauber und termingerecht – auch Umzugsküchen oder kleine Reparaturen wie Türen einstellen gehören zu unserem Service.
-Einsatzgebiet: Gronau und Umgebung bis 150 km.
-          </MotionTypography>
-
-          {/* Features List */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                gap: { xs: 2, md: 4 },
-                flexWrap: 'wrap',
-                mb: 2,
-              }}
-            >
-              {[
-                { icon: '✓', text: 'Deutschlandweit' },
-                { icon: '✓', text: 'Professionell' },
-                { icon: '✓', text: 'Zuverlässig' },
-              ].map((item, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 + idx * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                    <CheckCircleIcon
-                      sx={{
-                        color: '#4ecdc4',
-                        fontSize: 24,
-                      }}
-                    />
-                    <Typography
-                      sx={{
-                        color: '#e0e0e0',
-                        fontSize: { xs: '0.95rem', md: '1.1rem' },
-                        fontWeight: 500,
-                      }}
-                    >
-                      {item.text}
-                    </Typography>
-                  </Box>
-                </motion.div>
-              ))}
-            </Box>
-          </motion.div>
+          <Typography sx={{ fontSize: '0.88rem', fontWeight: 800, letterSpacing: '0.12em', color: '#a8ceff', mb: 1.4 }}>
+            REINIGUNGSSERVICE
+          </Typography>
+          <Typography sx={{ fontSize: { xs: '1.85rem', md: '2.8rem' }, fontWeight: 800, color: '#ffffff', lineHeight: 1.16, mb: 1.4 }}>
+            Sauberkeit, die man sieht und sofort spuert
+          </Typography>
+          <Typography sx={{ maxWidth: 800, mx: 'auto', color: 'rgba(255,255,255,0.86)', fontSize: { xs: '1rem', md: '1.1rem' } }}>
+            Unser Team reinigt gruendlich, termintreu und materialschonend. Fuer Privathaushalte, Gewerbe und Spezialflaechen im ganzen Muensterland.
+          </Typography>
         </MotionBox>
 
-        {/* Cleaning Services Grid */}
-        <Grid container spacing={{ xs: 3, md: 5 }} sx={{ justifyContent: 'center' }}>
+        <Grid container spacing={{ xs: 2.5, md: 3.2 }} sx={{ justifyContent: 'center' }}>
           {cleaningServices.map((s, idx) => (
             <Grid size={{ xs: 12, sm: 6, md: 4 }} key={idx}>
-              <CardWithGlow service={s} idx={idx} />
+              <MotionBox
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.07 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -6 }}
+                sx={{
+                  background: 'rgba(255,255,255,0.95)',
+                  borderRadius: 4,
+                  overflow: 'hidden',
+                  border: '1px solid rgba(255,255,255,0.22)',
+                  boxShadow: '0 14px 36px rgba(0, 0, 0, 0.18)',
+                  height: '100%',
+                }}
+              >
+                <Box
+                  component="img"
+                  src={s.image}
+                  alt={s.title}
+                  sx={{ width: '100%', height: 210, objectFit: 'cover' }}
+                />
+                <Box sx={{ p: { xs: 2.3, md: 2.7 } }}>
+                  <Typography sx={{ fontSize: { xs: '1.18rem', md: '1.34rem' }, fontWeight: 800, color: '#0f172a', mb: 1 }}>
+                    {s.title}
+                  </Typography>
+                  <Typography sx={{ color: 'rgba(15,23,42,0.78)', lineHeight: 1.58, mb: 1.3 }}>{s.description}</Typography>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                    <CheckCircleIcon sx={{ fontSize: 18, color: '#0765d4' }} />
+                    <Typography sx={{ color: '#0f172a', fontWeight: 600, fontSize: '0.92rem' }}>Schnelle Terminvergabe</Typography>
+                  </Box>
+                </Box>
+              </MotionBox>
             </Grid>
           ))}
         </Grid>
+
+        <Box sx={{ mt: { xs: 4, md: 5.5 }, textAlign: 'center' }}>
+          <Button
+            variant="contained"
+            href="https://wa.me/49176475615"
+            target="_blank"
+            endIcon={<ArrowForwardIcon />}
+            sx={{
+              px: 3.6,
+              py: 1.2,
+              borderRadius: '999px',
+              background: '#d7eaff',
+              color: '#0552a8',
+              fontWeight: 800,
+              boxShadow: '0 12px 28px rgba(6, 44, 98, 0.26)',
+              '&:hover': { background: '#c3ddff' },
+            }}
+          >
+            Reinigung jetzt anfragen
+          </Button>
+        </Box>
       </Container>
     </Box>
   );

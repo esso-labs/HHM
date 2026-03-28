@@ -1,8 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0765d4;
-  --foreground: #171717;
+  --background: #f4f8ff;
+  --foreground: #0f172a;
+  --surface: #ffffff;
+  --surface-soft: #edf4ff;
+  --brand: #0765d4;
+  --brand-strong: #0552a8;
+  --accent: #2e8cff;
+  --primary: #1d4ed8;
+  --secondary: #0f172a;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --shadow-soft: 0 18px 45px rgba(7, 55, 118, 0.12);
 }
 
 @theme inline {
@@ -14,37 +24,40 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f4f8ff;
+    --foreground: #0f172a;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-:root{
-  --accent: #ff6f00;
-  --primary: #1b5e20;
+  font-family: var(--font-poppins), "Segoe UI", sans-serif;
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
 }
 
 /* Hero gradient and card/ui helpers */
 .hero-gradient{
-  background: linear-gradient(180deg, rgba(26,35,126,0.92), rgba(255,111,0,0.06));
+  background: radial-gradient(130% 120% at 10% 10%, rgba(46, 140, 255, 0.2), rgba(7, 101, 212, 0.08) 35%, rgba(244, 248, 255, 0.95));
   color: white;
 }
 
 .service-card{
   transition: transform .28s ease, box-shadow .28s ease;
   will-change: transform;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   overflow: hidden;
+  box-shadow: 0 8px 30px rgba(11, 28, 61, 0.08);
+  border: 1px solid rgba(7, 101, 212, 0.12);
 }
 .service-card:hover{
   transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(10,10,30,0.12);
+  box-shadow: var(--shadow-soft);
 }
 
 /* Entrance animation (use together with JS that toggles .in) */
@@ -68,17 +81,17 @@ body {
   position: fixed;
   right: 20px;
   bottom: 24px;
-  background: var(--accent);
-  color: white;
+  background: var(--brand);
+  color: #fff;
   padding: 12px 16px;
   border-radius: 999px;
-  box-shadow: 0 10px 30px rgba(26,35,126,0.15);
+  box-shadow: var(--shadow-soft);
   font-weight: 700;
   z-index: 1200;
   text-decoration: none;
   display: inline-block;
 }
-.floating-cta:hover{ filter: brightness(.95); transform: translateY(-2px); }
+.floating-cta:hover{ background: var(--brand-strong); transform: translateY(-2px); }
 
 @media (max-width: 640px){
   .floating-cta{ right: 16px; left: 16px; bottom: 18px; width: auto; text-align: center; }
@@ -92,41 +105,44 @@ body {
 
 /* global section padding to mirror the source site */
 .section {
-  padding: 80px 0;
+  padding: clamp(62px, 9vw, 108px) 0;
 }
 @media (max-width: 768px) {
   .section {
-    padding: 60px 0;
+    padding: clamp(52px, 11vw, 72px) 0;
   }
 }
 
 h2 {
   color: var(--primary);
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
+  letter-spacing: -0.01em;
 }
 
 h3 {
   color: var(--primary);
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 /* navigation links */
 .nav-link {
-  color: black;
+  color: var(--secondary);
   text-transform: none;
-  font-weight: 600;
-  padding: 8px 12px;
+  font-weight: 700;
+  border-radius: 999px;
+  transition: background-color .2s ease, transform .2s ease;
 }
 .nav-link:hover {
-  background: rgba(255,255,255,0.2);
-  border-radius: 4px;
+  background: rgba(7, 101, 212, 0.11);
+  transform: translateY(-1px);
 }
 
 /* top info bar style */
 .top-bar {
-  background: #ccf15f;
-  color: black;
+  background: var(--accent);
+  color: var(--secondary);
   font-size: 0.875rem;
   padding: 4px 0;
   display: flex;
@@ -141,5 +157,9 @@ footer a {
 }
 footer a:hover {
   text-decoration: underline;
+}
+
+.MuiContainer-root {
+  position: relative;
 }
 

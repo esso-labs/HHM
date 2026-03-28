@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import dynamic from 'next/dynamic';
 import Hero from './components/Hero';
 import ReinigungSection from './components/ReinigungSection';
@@ -16,15 +16,9 @@ import Footer from './components/Footer';
 const Navbar = dynamic(() => import('./components/Navbar'), { ssr: false });
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <>
-      {mounted && <Navbar />}
+      <Navbar />
       <Hero />
       <ReinigungSection />
       <UmzuegeSection />

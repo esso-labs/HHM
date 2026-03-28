@@ -14,6 +14,7 @@ export default function ContactForm() {
     notes: '',
     agree: false
   });
+  const [statusText, setStatusText] = useState('');
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -22,26 +23,53 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('submit', form);
-    alert('Formular gesendet (Dummy)');
+    const lines = [
+      'Neue Anfrage ueber Website',
+      `Name/Firma: ${form.name || '-'}`,
+      `Telefon: ${form.phone || '-'}`,
+      `E-Mail: ${form.email || '-'}`,
+      `Flaeche (qm): ${form.area || '-'}`,
+      `Reinigungsservice: ${form.cleaning || '-'}`,
+      `Umzugsservice: ${form.moving || '-'}`,
+      `Weitere Infos: ${form.notes || '-'}`,
+    ];
+
+    const whatsappUrl = `https://wa.me/49176475615?text=${encodeURIComponent(lines.join('\n'))}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    setStatusText('Anfrage vorbereitet: WhatsApp wurde geoeffnet.');
   };
 
+  const isSubmitDisabled = !form.name || !form.phone || !form.email || !form.agree;
+
   return (
-    <Box id="contact" className="section" sx={{ py: { xs: 6, md: 10 }, background: '#d4ff00' }}>
+    <Box id="contact" className="section" sx={{ py: { xs: 7, md: 11 }, background: 'linear-gradient(180deg, #f7fbff 0%, #edf5ff 100%)' }}>
       <Container maxWidth="xl">
         {/* Title */}
         <Typography
           sx={{
             fontSize: { xs: '1.8rem', md: '2.2rem' },
-            fontWeight: 700,
+            fontWeight: 800,
             color: '#0f172a',
-            mb: 6
+            mb: 1.2
           }}
         >
-          Kostenfreie Kontakt Aufnahme
+          Kostenfreie Kontaktaufnahme
+        </Typography>
+        <Typography sx={{ fontSize: { xs: '0.98rem', md: '1.06rem' }, color: 'rgba(15,23,42,0.78)', mb: 5 }}>
+          Beschreiben Sie kurz Ihr Vorhaben. Wir melden uns zeitnah mit einem passenden Angebot.
         </Typography>
 
-        <Box component="form" onSubmit={handleSubmit}>
+        <Box
+          component="form"
+          onSubmit={handleSubmit}
+          sx={{
+            background: '#ffffff',
+            borderRadius: 4,
+            p: { xs: 2.2, md: 3.2 },
+            border: '1px solid rgba(7,101,212,0.14)',
+            boxShadow: '0 16px 36px rgba(8, 38, 84, 0.1)',
+          }}
+        >
           <Grid container spacing={{ xs: 3, md: 4 }}>
             {/* Row 1: Name & Phone */}
             <Grid size={{ xs: 12, md: 6 }}>
@@ -89,7 +117,7 @@ export default function ContactForm() {
             <Grid size={{ xs: 12, md: 6 }}>
               <Box sx={{ mb: 1 }}>
                 <Typography sx={{ fontSize: '0.95rem', fontWeight: 600, color: '#0f172a', mb: 1.5 }}>
-                  E-mail *
+                  E-Mail *
                 </Typography>
               </Box>
               <TextField
@@ -110,7 +138,7 @@ export default function ContactForm() {
             <Grid size={{ xs: 12, md: 6 }}>
               <Box sx={{ mb: 1 }}>
                 <Typography sx={{ fontSize: '0.95rem', fontWeight: 600, color: '#0f172a', mb: 1.5 }}>
-                  Fläche in qm*
+                  Flaeche in qm
                 </Typography>
               </Box>
               <TextField
@@ -132,7 +160,7 @@ export default function ContactForm() {
             <Grid size={{ xs: 12, md: 6 }}>
               <Box sx={{ mb: 1 }}>
                 <Typography sx={{ fontSize: '0.95rem', fontWeight: 600, color: '#0f172a', mb: 1.5 }}>
-                  Reinigungs Service
+                  Reinigungsservice
                 </Typography>
               </Box>
               <Select
@@ -160,7 +188,7 @@ export default function ContactForm() {
             <Grid size={{ xs: 12, md: 6 }}>
               <Box sx={{ mb: 1 }}>
                 <Typography sx={{ fontSize: '0.95rem', fontWeight: 600, color: '#0f172a', mb: 1.5 }}>
-                  Umzugs-Service
+                  Umzugsservice
                 </Typography>
               </Box>
               <Select
@@ -229,7 +257,7 @@ export default function ContactForm() {
                   <Typography sx={{ fontSize: '0.95rem', color: '#0f172a' }}>
                     Ich bin mit den{' '}
                     <Box component="a" href="/datenschutz" sx={{ color: '#1e3a8a', textDecoration: 'underline', cursor: 'pointer' }}>
-                      Datenschutzerklärung
+                      Datenschutzbestimmungen
                     </Box>{' '}
                     einverstanden.
                   </Typography>
@@ -237,29 +265,36 @@ export default function ContactForm() {
               />
             </Grid>
 
+            {statusText ? (
+              <Grid size={{ xs: 12 }}>
+                <Typography sx={{ color: '#0765d4', fontWeight: 600 }}>{statusText}</Typography>
+              </Grid>
+            ) : null}
+
             {/* Row 6: Button */}
             <Grid size={{ xs: 12 }}>
               <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                 <Button
                   type="submit"
                   variant="contained"
+                  disabled={isSubmitDisabled}
                   sx={{
-                    background: '#1a90ff',
+                    background: '#0765d4',
                     color: '#ffffff',
                     paddingX: 6,
                     paddingY: 1.5,
                     fontSize: '1rem',
                     fontWeight: 700,
-                    borderRadius: '8px',
+                    borderRadius: '999px',
                     '&:hover': {
-                      background: '#0070d8',
+                      background: '#0552a8',
                       transform: 'translateY(-2px)',
-                      boxShadow: '0 8px 24px rgba(26, 144, 255, 0.3)'
+                      boxShadow: '0 10px 24px rgba(7, 101, 212, 0.32)'
                     },
                     transition: 'all 0.3s ease'
                   }}
                 >
-                  Jetzt senden
+                  Anfrage per WhatsApp senden
                 </Button>
               </Box>
             </Grid>
