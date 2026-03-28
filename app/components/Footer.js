@@ -132,8 +132,8 @@ export default function Footer() {
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
               {[
                 { label: 'Reinigung', href: '#reinigung' },
-                { label: 'Umzuege', href: '#umzuege' },
-                { label: 'Ueber uns', href: '#wir' },
+                { label: 'Umzüge', href: '#umzuege' },
+                { label: 'Über uns', href: '#wir' },
                 { label: 'Bewertungen', href: '#bewertungen' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'Projekte', href: '#projekte' },

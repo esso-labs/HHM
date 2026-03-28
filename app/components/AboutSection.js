@@ -30,7 +30,7 @@ export default function AboutSection() {
         >
           <Box sx={{ width: 8, height: 8, borderRadius: '50%', background: '#ffffff' }} />
           <Typography sx={{ fontSize: '0.85rem', fontWeight: '700', letterSpacing: 1.5, color: '#ffffff' }}>
-            UEBER HANDWERKER & MONTAGE HUNDSBUSCHER
+            ÜBER HANDWERKER & MONTAGE HUNDSBUSCHER
           </Typography>
         </MotionBox>
 
@@ -58,7 +58,7 @@ export default function AboutSection() {
                   }
                 }}
               >
-                Ein starkes Handwerks- und Montageteam, das mit praeziser Arbeit, klarer Kommunikation und verlaesslichem Service ueberzeugt.
+                Ein starkes Handwerks- und Montageteam, das mit präziser Arbeit, klarer Kommunikation und verlässlichem Service überzeugt.
               </Typography>
             </MotionBox>
           </Box>
@@ -77,7 +77,7 @@ export default function AboutSection() {
                   HANDWERKER & MONTAGE HUNDSBUSCHER
                 </Typography>
                 <Typography sx={{ fontSize: { xs: '0.95rem', md: '1rem' }, lineHeight: 1.7, color: 'rgba(255,255,255,0.95)' }}>
-                  Ihr zuverlaessiger Partner fuer Umzuege, Montagearbeiten und Reinigungen. Wir verbinden alle Leistungen in einem klaren Serviceversprechen: termintreu, gruendlich und transparent.
+                  Ihr zuverlässiger Partner für Umzüge, Montagearbeiten und Reinigungen. Wir verbinden alle Leistungen in einem klaren Serviceversprechen: termintreu, gründlich und transparent.
                 </Typography>
               </Box>
 
@@ -87,7 +87,7 @@ export default function AboutSection() {
                   UMZÜGE – PRIVAT UND GEWERBLICH
                 </Typography>
                 <Typography sx={{ fontSize: { xs: '0.95rem', md: '1rem' }, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)' }}>
-                  Unser Umzugsservice deckt ein breites Spektrum ab. Egal, ob privater Wohnungswechsel oder grosser Firmenumzug in Deutschland: Wir planen jeden Schritt mit Ihnen gemeinsam. Unser erfahrenes Team kuemmert sich um jedes Detail, damit Ihr Umzug reibungslos und effizient ablaeuft.
+                  Unser Umzugsservice deckt ein breites Spektrum ab. Egal, ob privater Wohnungswechsel oder großer Firmenumzug in Deutschland: Wir planen jeden Schritt mit Ihnen gemeinsam. Unser erfahrenes Team kümmert sich um jedes Detail, damit Ihr Umzug reibungslos und effizient abläuft.
                 </Typography>
               </Box>
 
@@ -97,7 +97,7 @@ export default function AboutSection() {
                   REINIGUNGEN IM MÜNSTERLAND – QUALITÄT ZUM SEHR FAIREN PREIS
                 </Typography>
                 <Typography sx={{ fontSize: { xs: '0.95rem', md: '1rem' }, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)' }}>
-                  Neben Umzuegen bieten wir einen erstklassigen Reinigungsservice im Muensterland. Von Fenster- und Unterhaltsreinigung bis zu anspruchsvollen Gewerbeflaechen liefern wir saubere Ergebnisse mit messbarer Qualitaet. Dabei achten wir auf faire Preise und verlaessliche Einsaetze.
+                  Neben Umzügen bieten wir einen erstklassigen Reinigungsservice im Münsterland. Von Fenster- und Unterhaltsreinigung bis zu anspruchsvollen Gewerbeflächen liefern wir saubere Ergebnisse mit messbarer Qualität. Dabei achten wir auf faire Preise und verlässliche Einsätze.
                 </Typography>
               </Box>
 
@@ -107,7 +107,7 @@ export default function AboutSection() {
                   WARUM HANDWERKER & MONTAGE HUNDSBUSCHER?
                 </Typography>
                 <Typography sx={{ fontSize: { xs: '0.95rem', md: '1rem' }, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)' }}>
-                  Bei Handwerker & Montage Hundsbuscher stehen Ihre Beduerfnisse im Mittelpunkt. Wir arbeiten loesungsorientiert, kommunizieren klar und halten Zusagen ein. So erhalten Sie einen Partner, auf den Sie sich bei jedem Projekt verlassen koennen.
+                  Bei Handwerker & Montage Hundsbuscher stehen Ihre Bedürfnisse im Mittelpunkt. Wir arbeiten lösungsorientiert, kommunizieren klar und halten Zusagen ein. So erhalten Sie einen Partner, auf den Sie sich bei jedem Projekt verlassen können.
                 </Typography>
               </Box>
             </MotionBox>

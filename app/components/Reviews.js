@@ -16,7 +16,7 @@ const testimonials = [
     image: '/img/kundenbewertungen/lucid-origin_Ultra_realistic_photo_of_a_perfectly_clean_apartment_interior_after_renovation_s-0.jpg'
   },
   {
-    text: 'Handwerker & Montage Hundsbuscher hat unseren Umzug absolut stressfrei gemacht. Professionell, puenktlich und sorgfaeltig wir konnten uns entspannt zuruecklehnen. Sehr empfehlenswert!',
+    text: 'Handwerker & Montage Hundsbuscher hat unseren Umzug absolut stressfrei gemacht. Professionell, pünktlich und sorgfältig wir konnten uns entspannt zurücklehnen. Sehr empfehlenswert!',
     author: 'Sebastian Nagel',
     image: '/img/kundenbewertungen/lucid-origin_Moving_boxes_stacked_neatly_in_a_bright_modern_apartment_natural_light_from_larg-0.jpg'
   },
@@ -36,7 +36,7 @@ const testimonials = [
     image: '/img/kundenbewertungen/lucid-origin_Modern_house_entrance_with_clean_front_door_minimalistic_design_well-maintained_-0.jpg'
   },
   {
-    text: 'Unkompliziert, freundlich und puenktlich. Unser Umzug war dank Handwerker & Montage Hundsbuscher wirklich entspannend. Alles ging zuegig und ohne Stress ueber die Buehne. Gerne wieder!',
+    text: 'Unkompliziert, freundlich und pünktlich. Unser Umzug war dank Handwerker & Montage Hundsbuscher wirklich entspannend. Alles ging zügig und ohne Stress über die Bühne. Gerne wieder!',
     author: 'Frank Wagner',
     image: '/img/kundenbewertungen/lucid-origin_Realistic_photo_of_a_house_key_being_placed_on_a_clean_wooden_surface_near_a_mod-0.jpg'
   }

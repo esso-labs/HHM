@@ -9,7 +9,7 @@ const partners = [
   'Bahnhofsgrill',
   'Gastro Service Gronau',
   'Fitnesspoint Westfalen',
-  'OfficeHub Muensterland',
+  'OfficeHub Münsterland',
   'Hotel am Stadtpark',
 ];
 

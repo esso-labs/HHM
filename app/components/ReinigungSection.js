@@ -10,34 +10,34 @@ const MotionBox = motion.create(Box);
 
 const cleaningServices = [
   {
-    title: 'PV-Anlagenreinigung',
-    image: '/img/anlage.jpg',
-    description: 'Leistungsstarke Reinigung fuer mehr Ertrag und laengere Lebensdauer Ihrer Anlage.',
+    title: '1. Möbelmontage',
+    image: '/img/cardelement/1.jpeg',
+    description: 'Fachgerechter Aufbau Ihrer Möbel – schnell und stressfrei.',
   },
   {
-    title: 'Glas- und Fensterreinigung',
-    image: '/img/glas.jpg',
-    description: 'Streifenfrei, materialschonend und mit klaren Intervallen fuer private und gewerbliche Flaechen.',
+    title: '2. Küchenmontage',
+    image: '/img/cardelement/2.jpeg',
+    description: 'Präzise Küchenmontage vom Profi – inklusive Anschlüsse und Anpassungen.',
   },
   {
-    title: 'Entruempelung und Grundreinigung',
-    image: '/img/coutch.jpg',
-    description: 'Von der Raeumung bis zur bezugsfertigen Flaeche, schnell organisiert und sauber umgesetzt.',
+    title: '3. Umzüge',
+    image: '/img/cardelement/3.png',
+    description: 'Zuverlässige Unterstützung bei Umzügen und Transporten.',
   },
   {
-    title: 'Buero- und Gewerbereinigung',
-    image: '/img/kuche.jpg',
-    description: 'Planbare Reinigungsablaeufe fuer Teams, Kundenbereiche und sensible Arbeitszonen.',
+    title: '4. Möbelreparatur & Austausch',
+    image: '/img/cardelement/4.png',
+    description: 'Reparatur von Einzelteilen und fachgerechter Austausch beschädigter Komponenten.',
   },
   {
-    title: 'Teppich- und Polsterpflege',
-    image: '/img/teppich.jpg',
-    description: 'Schonende Tiefenreinigung fuer frische Oberflaechen und sichtbar bessere Hygiene.',
+    title: '5. Möbelaufbereitung',
+    image: '/img/cardelement/5.png',
+    description: 'Aufbereitung und optische Erneuerung alter Möbel für ein frisches Erscheinungsbild',
   },
   {
-    title: 'Hochdruck- und Aussenreinigung',
-    image: '/img/umzug.jpg',
-    description: 'Effektive Aussenreinigung fuer Wege, Einfahrten, Fassaden und stark beanspruchte Flaechen.',
+    title: '6. Entrümpelung',
+    image: '/img/cardelement/5.png',
+    description: 'Schnelle und zuverlässige Entrümpelung von Wohnungen, Kellern und Häusern – sauber, diskret und fachgerecht.',
   },
 ];
 
@@ -75,7 +75,7 @@ export default function ReinigungSection() {
             Qualität, auf die Sie sich verlassen können.
           </Typography>
           <Typography sx={{ maxWidth: 800, mx: 'auto', color: 'rgba(255,255,255,0.86)', fontSize: { xs: '1rem', md: '1.1rem' } }}>
-            Unser Team reinigt gruendlich, termintreu und materialschonend. Fuer Privathaushalte, Gewerbe und Spezialflaechen im ganzen Muensterland.
+            Unser Team reinigt gründlich, termintreu und materialschonend. Für Privathaushalte, Gewerbe und Spezialflächen im ganzen Münsterland.
           </Typography>
         </MotionBox>
 

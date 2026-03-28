@@ -18,7 +18,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const sections = [
-  { id: 'reinigung', label: 'Reinigung' },
+  { id: 'reinigung', label: 'Unser Service' },
   { id: 'umzuege', label: 'Umzüge' },
   { id: 'wir', label: 'Wir' },
   { id: 'bewertungen', label: 'Bewertungen' },

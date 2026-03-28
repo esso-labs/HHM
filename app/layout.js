@@ -19,8 +19,8 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "Handwerker & Montage Hundsbuscher – Umzüge und Reinigungen",
-  description: "Professionelle Umzuege und Reinigungen mit Handwerker & Montage Hundsbuscher: zuverlaessig, termintreu und sauber umgesetzt.",
-  keywords: "Handwerker und Montage Hundsbuscher, Umzuege, Reinigungsservice, PV-Reinigung, Fensterreinigung, Entruempelung",
+  description: "Professionelle Umzüge und Reinigungen mit Handwerker & Montage Hundsbuscher: zuverlässig, termintreu und sauber umgesetzt.",
+  keywords: "Handwerker und Montage Hundsbuscher, Umzüge, Reinigungsservice, PV-Reinigung, Fensterreinigung, Entrümpelung",
 };
 
 import ThemeProviderWrapper from './components/ThemeProviderWrapper';

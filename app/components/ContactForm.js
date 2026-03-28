@@ -24,11 +24,11 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const lines = [
-      'Neue Anfrage ueber Website',
+      'Neue Anfrage über Website',
       `Name/Firma: ${form.name || '-'}`,
       `Telefon: ${form.phone || '-'}`,
       `E-Mail: ${form.email || '-'}`,
-      `Flaeche (qm): ${form.area || '-'}`,
+      `Fläche (qm): ${form.area || '-'}`,
       `Reinigungsservice: ${form.cleaning || '-'}`,
       `Umzugsservice: ${form.moving || '-'}`,
       `Weitere Infos: ${form.notes || '-'}`,
@@ -36,7 +36,7 @@ export default function ContactForm() {
 
     const whatsappUrl = `https://wa.me/49176475615?text=${encodeURIComponent(lines.join('\n'))}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-    setStatusText('Anfrage vorbereitet: WhatsApp wurde geoeffnet.');
+    setStatusText('Anfrage vorbereitet: WhatsApp wurde geöffnet.');
   };
 
   const isSubmitDisabled = !form.name || !form.phone || !form.email || !form.agree;
@@ -138,7 +138,7 @@ export default function ContactForm() {
             <Grid size={{ xs: 12, md: 6 }}>
               <Box sx={{ mb: 1 }}>
                 <Typography sx={{ fontSize: '0.95rem', fontWeight: 600, color: '#0f172a', mb: 1.5 }}>
-                  Flaeche in qm
+                  Fläche in qm
                 </Typography>
               </Box>
               <TextField

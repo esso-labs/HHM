@@ -10,20 +10,20 @@ const moveServices = [
   {
     title: 'Privatumzug',
     image: '/img/umzug.jpg',
-    description: 'Sorgfaeltige Planung, sicherer Transport und ein Team, das mitdenkt.',
-    points: ['Packservice auf Wunsch', 'Moebelmontage inklusive', 'Stressfrei bis zur Uebergabe'],
+    description: 'Sorgfältige Planung, sicherer Transport und ein Team, das mitdenkt.',
+    points: ['Packservice auf Wunsch', 'Möbelmontage inklusive', 'Stressfrei bis zur Übergabe'],
   },
   {
     title: 'Firmenumzug',
     image: '/img/banner.png',
-    description: 'Effiziente Umzuege fuer Bueros und Gewerbe mit minimaler Ausfallzeit.',
-    points: ['Klare Ablaufplanung', 'Wochenend-Termine moeglich', 'Diskret und zuverlaessig'],
+    description: 'Effiziente Umzüge für Büros und Gewerbe mit minimaler Ausfallzeit.',
+    points: ['Klare Ablaufplanung', 'Wochenend-Termine möglich', 'Diskret und zuverlässig'],
   },
   {
     title: 'Fernumzug',
     image: '/img/background22.jpg',
-    description: 'Bundesweite Einsaetze mit transparentem Ablauf und fester Betreuung.',
-    points: ['Deutschlandweit verfuegbar', 'Versicherter Transport', 'Termintreu und puenktlich'],
+    description: 'Bundesweite Einsätze mit transparentem Ablauf und fester Betreuung.',
+    points: ['Deutschlandweit verfügbar', 'Versicherter Transport', 'Termintreu und pünktlich'],
   },
 ];
 
@@ -51,7 +51,7 @@ export default function UmzuegeSection() {
             UMZUGSSERVICE
           </Typography>
           <Typography sx={{ fontSize: { xs: '1.85rem', md: '2.8rem' }, fontWeight: 800, color: '#0f172a', lineHeight: 1.16, mb: 1.2 }}>
-            Umzuege mit Plan, Power und persoenlicher Betreuung
+            Umzüge mit Plan, Power und persönlicher Betreuung
           </Typography>
           <Typography sx={{ maxWidth: 760, mx: 'auto', color: 'rgba(15,23,42,0.78)', fontSize: { xs: '1rem', md: '1.08rem' } }}>
             Von der ersten Besichtigung bis zum letzten Karton: Wir organisieren Ihren Umzug effizient und sicher.
