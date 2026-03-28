@@ -69,10 +69,10 @@ export default function ReinigungSection() {
           sx={{ mb: { xs: 5, md: 7 }, textAlign: 'center' }}
         >
           <Typography sx={{ fontSize: '0.88rem', fontWeight: 800, letterSpacing: '0.12em', color: '#a8ceff', mb: 1.4 }}>
-            REINIGUNGSSERVICE
+            LEISTUNGEN
           </Typography>
           <Typography sx={{ fontSize: { xs: '1.85rem', md: '2.8rem' }, fontWeight: 800, color: '#ffffff', lineHeight: 1.16, mb: 1.4 }}>
-            Sauberkeit, die man sieht und sofort spuert
+            Qualität, auf die Sie sich verlassen können.
           </Typography>
           <Typography sx={{ maxWidth: 800, mx: 'auto', color: 'rgba(255,255,255,0.86)', fontSize: { xs: '1rem', md: '1.1rem' } }}>
             Unser Team reinigt gruendlich, termintreu und materialschonend. Fuer Privathaushalte, Gewerbe und Spezialflaechen im ganzen Muensterland.

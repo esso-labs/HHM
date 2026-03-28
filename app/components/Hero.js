@@ -117,7 +117,7 @@ export default function Hero() {
               mb: 2.1,
             }}
           >
-            UMZUG UND REINIGUNG AUS EINER HAND
+            Möbel- & Küchenmontage vom Profi
           </Typography>
           <Typography
             variant="h1"
@@ -132,9 +132,9 @@ export default function Hero() {
               textWrap: 'balance',
             }}
           >
-            Dein zuverlaessiger
+            Schnell. Sauber. Zuverlässig.
             <Box component="span" sx={{ color: '#0765d4', display: 'block' }}>
-              Servicepartner
+              Ihr Experte für Montagearbeiten rund ums Zuhause.
             </Box>
           </Typography>
         </motion.div>
