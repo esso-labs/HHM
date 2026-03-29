@@ -132,7 +132,7 @@ export default function Hero() {
               textWrap: 'balance',
             }}
           >
-            Schnell. Sauber. Zuverlässig.
+            Foto senden. Angebot bekommen. Fertig.
             <Box component="span" sx={{ color: '#0765d4', display: 'block' }}>
               Ihr Experte für Montagearbeiten rund ums Zuhause.
             </Box>

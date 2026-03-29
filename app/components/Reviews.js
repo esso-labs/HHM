@@ -12,32 +12,32 @@ const REVIEW_TRANSITION = { duration: 0.85, ease: [0.22, 0.61, 0.36, 1] };
 const testimonials = [
   {
     text: 'Unser Büro strahlt förmlich, und das Reinigungsteam war äußerst gründlich und diskret. Besonders gefallen hat mir, dass sie sich komplett nach unseren Arbeitszeiten gerichtet haben, ohne den Betriebsablauf zu stören.',
-    author: 'Markus Circ',
+    author: 'Dominik Schulze',
     image: '/img/kundenbewertungen/lucid-origin_Ultra_realistic_photo_of_a_perfectly_clean_apartment_interior_after_renovation_s-0.jpg'
   },
   {
     text: 'Handwerker & Montage Hundsbuscher hat unseren Umzug absolut stressfrei gemacht. Professionell, pünktlich und sorgfältig wir konnten uns entspannt zurücklehnen. Sehr empfehlenswert!',
-    author: 'Sebastian Nagel',
+    author: 'Luca Ziegler',
     image: '/img/kundenbewertungen/lucid-origin_Moving_boxes_stacked_neatly_in_a_bright_modern_apartment_natural_light_from_larg-0.jpg'
   },
   {
     text: 'Die Reinigung in unserer Wohnung war tadellös. Das Team war effizient, freundlich und hat unseren Platz wirklich wie neu gemacht. Können sie nur weiterempfehlen!',
-    author: 'Petra Schmidt',
+    author: 'Torsten Schwab',
     image: '/img/kundenbewertungen/lucid-origin_Cozy_and_modern_living_room_in_a_freshly_finished_apartment_perfectly_arranged_f-0.jpg'
   },
   {
     text: 'Unser Firmenumzug verlief ohne Probleme. Alle Möbel wurden mit großer Sorgfalt transportiert. Das Team war kompetent und hilfreich. Top Service!',
-    author: 'Thomas Mueller',
+    author: 'Markus Ackerman',
     image: '/img/kundenbewertungen/lucid-origin_Close-up_of_detailed_craftsmanship_hands_not_visible_focus_on_perfectly_installe-0.jpg'
   },
   {
     text: 'Sehr professionell und zuverlässig. Die Reinigung nach unserem Umzug war perfekt  alles war blitzblank. Danke für den ausgezeichneten Service!',
-    author: 'Annika Baumann',
+    author: 'Luca Freud',
     image: '/img/kundenbewertungen/lucid-origin_Modern_house_entrance_with_clean_front_door_minimalistic_design_well-maintained_-0.jpg'
   },
   {
     text: 'Unkompliziert, freundlich und pünktlich. Unser Umzug war dank Handwerker & Montage Hundsbuscher wirklich entspannend. Alles ging zügig und ohne Stress über die Bühne. Gerne wieder!',
-    author: 'Frank Wagner',
+    author: 'Dominik Eiffel',
     image: '/img/kundenbewertungen/lucid-origin_Realistic_photo_of_a_house_key_being_placed_on_a_clean_wooden_surface_near_a_mod-0.jpg'
   }
 ];

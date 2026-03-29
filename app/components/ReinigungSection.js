@@ -10,34 +10,34 @@ const MotionBox = motion.create(Box);
 
 const cleaningServices = [
   {
-    title: '1. Möbelmontage',
+    title: 'Küchenmontage & Umzugsküchen',
     image: '/img/cardelement/1.jpeg',
-    description: 'Fachgerechter Aufbau Ihrer Möbel – schnell und stressfrei.',
+    description: 'Montage neuer Küchen sowie fachgerechter Ab- und Aufbau von Umzugsküchen – inklusive Anpassungen und Anschlüsse.',
   },
   {
-    title: '2. Küchenmontage',
+    title: 'Möbelmontage (neu & Umzug)',
     image: '/img/cardelement/2.jpeg',
-    description: 'Präzise Küchenmontage vom Profi – inklusive Anschlüsse und Anpassungen.',
+    description: 'Wir montieren alle Möbel – egal ob neu gekauft oder vom Umzug. Schnell, sauber und stressfrei.',
   },
   {
-    title: '3. Umzüge',
-    image: '/img/cardelement/3.png',
-    description: 'Zuverlässige Unterstützung bei Umzügen und Transporten.',
+    title: 'Küchenanpassung & Änderungen',
+    image: '/img/cardelement/3.jpeg',
+    description: 'Individuelle Anpassungen wie Zuschnitte, Umbauten oder Erweiterungen Ihrer Küche. Bitte beachten: Wir bieten keinen Verkauf von Ersatzteilen an.',
   },
   {
-    title: '4. Möbelreparatur & Austausch',
-    image: '/img/cardelement/4.png',
-    description: 'Reparatur von Einzelteilen und fachgerechter Austausch beschädigter Komponenten.',
+    title: 'Möbelreparatur & Austausch',
+    image: '/img/cardelement/4.jpeg',
+    description: 'Reparatur und Instandsetzung von Möbeln – z. B. Ausrichten von Türen, Beheben von Macken und kleinere Anpassungen. Bitte beachten: Wir verkaufen keine Ersatzteile.',
   },
   {
-    title: '5. Möbelaufbereitung',
-    image: '/img/cardelement/5.png',
-    description: 'Aufbereitung und optische Erneuerung alter Möbel für ein frisches Erscheinungsbild',
+    title: 'Möbelaufbereitung',
+    image: '/img/cardelement/5.jpeg',
+    description: 'Aufbereitung und optische Erneuerung alter Möbel für ein frisches Erscheinungsbild. Auf Wunsch nehmen wir Möbel mit und bereiten sie fachgerecht auf (z. B. schleifen und lackieren).',
   },
   {
-    title: '6. Entrümpelung',
-    image: '/img/cardelement/5.png',
-    description: 'Schnelle und zuverlässige Entrümpelung von Wohnungen, Kellern und Häusern – sauber, diskret und fachgerecht.',
+    title: 'Entrümpelung',
+    image: '/img/cardelement/6.jpeg',
+    description: 'Schnelle und zuverlässige Entrümpelung von Wohnungen, Kellern und Häusern. Für größere Einsätze (z. B. Garagen oder komplette Haushaltsauflösungen) kann ein zusätzliches Team organisiert werden.',
   },
 ];
 
@@ -72,10 +72,10 @@ export default function ReinigungSection() {
             LEISTUNGEN
           </Typography>
           <Typography sx={{ fontSize: { xs: '1.85rem', md: '2.8rem' }, fontWeight: 800, color: '#ffffff', lineHeight: 1.16, mb: 1.4 }}>
-            Qualität, auf die Sie sich verlassen können.
+            Alles rund um Möbel- & Küchenmontage
           </Typography>
           <Typography sx={{ maxWidth: 800, mx: 'auto', color: 'rgba(255,255,255,0.86)', fontSize: { xs: '1rem', md: '1.1rem' } }}>
-            Unser Team reinigt gründlich, termintreu und materialschonend. Für Privathaushalte, Gewerbe und Spezialflächen im ganzen Münsterland.
+            Einfach Foto per WhatsApp senden – wir erstellen Ihnen schnell ein Angebot.
           </Typography>
         </MotionBox>
 
@@ -135,7 +135,7 @@ export default function ReinigungSection() {
               '&:hover': { background: '#c3ddff' },
             }}
           >
-            Reinigung jetzt anfragen
+            Angebot erhalten
           </Button>
         </Box>
       </Container>

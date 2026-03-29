@@ -51,10 +51,14 @@ export default function UmzuegeSection() {
             UMZUGSSERVICE
           </Typography>
           <Typography sx={{ fontSize: { xs: '1.85rem', md: '2.8rem' }, fontWeight: 800, color: '#0f172a', lineHeight: 1.16, mb: 1.2 }}>
-            Umzüge mit Plan, Power und persönlicher Betreuung
+            Zuverlässige Unterstützung bei Umzügen und Transporten.
           </Typography>
           <Typography sx={{ maxWidth: 760, mx: 'auto', color: 'rgba(15,23,42,0.78)', fontSize: { xs: '1rem', md: '1.08rem' } }}>
-            Von der ersten Besichtigung bis zum letzten Karton: Wir organisieren Ihren Umzug effizient und sicher.
+            <>
+              Umzug und Montage können bei uns direkt kombiniert werden – Möbel werden vor Ort abgebaut und am neuen Standort wieder fachgerecht aufgebaut.
+              <br />
+              Für komplette Umzüge arbeiten wir zusätzlich mit einer spezialisierten Partnerfirma zusammen und können Sie bei Bedarf weitervermitteln.
+            </>
           </Typography>
         </MotionBox>
 

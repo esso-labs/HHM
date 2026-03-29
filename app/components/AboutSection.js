@@ -1,17 +1,17 @@
 'use client';
 
 import React from 'react';
-import { Box, Container, Typography, Grid } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 
 const MotionBox = motion.create(Box);
 
 export default function AboutSection() {
   return (
-    <Box 
-      id="wir" 
-      className="section" 
-      sx={{ 
+    <Box
+      id="wir"
+      className="section"
+      sx={{
         py: { xs: 8, md: 12 },
         background: 'linear-gradient(135deg, #0f172a 0%, #182742 100%)',
         color: '#ffffff',
@@ -30,7 +30,7 @@ export default function AboutSection() {
         >
           <Box sx={{ width: 8, height: 8, borderRadius: '50%', background: '#ffffff' }} />
           <Typography sx={{ fontSize: '0.85rem', fontWeight: '700', letterSpacing: 1.5, color: '#ffffff' }}>
-            ÜBER HANDWERKER & MONTAGE HUNDSBUSCHER
+            Über Handwerk & Montage Hundsbüscher
           </Typography>
         </MotionBox>
 
@@ -44,9 +44,9 @@ export default function AboutSection() {
               whileHover={{ scale: 1.02, y: -5 }}
               viewport={{ once: true }}
             >
-              <Typography 
+              <Typography
                 component="h1"
-                sx={{ 
+                sx={{
                   fontSize: { xs: '2.5rem', md: '3.5rem', lg: '4rem' },
                   fontWeight: 700,
                   lineHeight: 1.15,
@@ -58,12 +58,12 @@ export default function AboutSection() {
                   }
                 }}
               >
-                Ein starkes Handwerks- und Montageteam, das mit präziser Arbeit, klarer Kommunikation und verlässlichem Service überzeugt.
+                Handwerk & Montage Hundsbüscher
               </Typography>
             </MotionBox>
           </Box>
 
-          {/* Right (50%): Text Blocks */}
+          {/* Right (50%): Text */}
           <Box>
             <MotionBox
               initial={{ opacity: 0, x: 50 }}
@@ -71,45 +71,11 @@ export default function AboutSection() {
               transition={{ duration: 0.7, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              {/* Block 1 */}
-              <Box sx={{ mb: 5 }}>
-                <Typography sx={{ fontSize: '0.9rem', fontWeight: 600, color: '#8fc3ff', mb: 1.5, letterSpacing: 0.5 }}>
-                  HANDWERKER & MONTAGE HUNDSBUSCHER
-                </Typography>
-                <Typography sx={{ fontSize: { xs: '0.95rem', md: '1rem' }, lineHeight: 1.7, color: 'rgba(255,255,255,0.95)' }}>
-                  Ihr zuverlässiger Partner für Umzüge, Montagearbeiten und Reinigungen. Wir verbinden alle Leistungen in einem klaren Serviceversprechen: termintreu, gründlich und transparent.
-                </Typography>
-              </Box>
-
-              {/* Block 2 */}
-              <Box sx={{ mb: 5 }}>
-                <Typography sx={{ fontSize: '0.9rem', fontWeight: 600, color: '#ffffff', mb: 1.5, letterSpacing: 0.5 }}>
-                  UMZÜGE – PRIVAT UND GEWERBLICH
-                </Typography>
-                <Typography sx={{ fontSize: { xs: '0.95rem', md: '1rem' }, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)' }}>
-                  Unser Umzugsservice deckt ein breites Spektrum ab. Egal, ob privater Wohnungswechsel oder großer Firmenumzug in Deutschland: Wir planen jeden Schritt mit Ihnen gemeinsam. Unser erfahrenes Team kümmert sich um jedes Detail, damit Ihr Umzug reibungslos und effizient abläuft.
-                </Typography>
-              </Box>
-
-              {/* Block 3 */}
-              <Box sx={{ mb: 5 }}>
-                <Typography sx={{ fontSize: '0.9rem', fontWeight: 600, color: '#ffffff', mb: 1.5, letterSpacing: 0.5 }}>
-                  REINIGUNGEN IM MÜNSTERLAND – QUALITÄT ZUM SEHR FAIREN PREIS
-                </Typography>
-                <Typography sx={{ fontSize: { xs: '0.95rem', md: '1rem' }, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)' }}>
-                  Neben Umzügen bieten wir einen erstklassigen Reinigungsservice im Münsterland. Von Fenster- und Unterhaltsreinigung bis zu anspruchsvollen Gewerbeflächen liefern wir saubere Ergebnisse mit messbarer Qualität. Dabei achten wir auf faire Preise und verlässliche Einsätze.
-                </Typography>
-              </Box>
-
-              {/* Block 4 */}
-              <Box>
-                <Typography sx={{ fontSize: '0.9rem', fontWeight: 600, color: '#ffffff', mb: 1.5, letterSpacing: 0.5 }}>
-                  WARUM HANDWERKER & MONTAGE HUNDSBUSCHER?
-                </Typography>
-                <Typography sx={{ fontSize: { xs: '0.95rem', md: '1rem' }, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)' }}>
-                  Bei Handwerker & Montage Hundsbuscher stehen Ihre Bedürfnisse im Mittelpunkt. Wir arbeiten lösungsorientiert, kommunizieren klar und halten Zusagen ein. So erhalten Sie einen Partner, auf den Sie sich bei jedem Projekt verlassen können.
-                </Typography>
-              </Box>
+              <Typography sx={{ fontSize: { xs: '0.95rem', md: '1rem' }, lineHeight: 1.8, color: 'rgba(255,255,255,0.92)' }}>
+                Wir arbeiten präzise, sauber und kundenorientiert. Ihre Wünsche stehen bei uns im Mittelpunkt – wir setzen Montagen fachgerecht und zuverlässig um.
+                <br />
+                Umzüge führen wir in Kombination mit ausgewählten Partnerfirmen durch, um einen reibungslosen Ablauf zu gewährleisten.
+              </Typography>
             </MotionBox>
           </Box>
         </Box>
