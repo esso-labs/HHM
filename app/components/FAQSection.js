@@ -9,32 +9,36 @@ const MotionBox = motion.create(Box);
 
 const faqData = [
   {
-    question: 'Was kostet ein Umzugsunternehmen?',
-    answer: 'Die Kosten für ein Umzugsunternehmen variieren und hängen von mehreren Faktoren ab. Das Volumen des Umzugsguts spielt eine Rolle, ebenso wie die Entfernung zwischen dem alten und dem neuen Wohnort. Auch die Etage ist wichtig: Ob sich die Wohnung im Erdgeschoss oder in einem höheren Stockwerk befindet und ob ein Aufzug vorhanden ist, kann den Preis beeinflussen. Darüber hinaus kommen oft Extras hinzu, wie Montagearbeiten, der Einsatz eines Möbellifts, die Einrichtung von Halteverbotszonen, die Bereitstellung von Umzugsmaterialien und eventuelle Einlagerung. Um ein genaues Angebot zu erhalten, kontaktieren Sie uns!'
+    question: '📸 Wie kann ich ein Angebot erhalten?',
+    answer: 'Schicken Sie uns einfach ein Foto Ihrer Möbel oder Küche per WhatsApp - wir melden uns schnell mit einem Angebot.'
   },
   {
-    question: 'Wie lange dauert ein Umzug?',
-    answer: 'Die Dauer eines Umzugs hängt natürlich von der Größe des Umzugs ab, aber in der Regel dauert ein Umzug durchschnittlich eins bis zwei Tage.'
+    question: '🪑 Montieren Sie auch Möbel vom Umzug?',
+    answer: 'Ja, wir montieren sowohl neue Möbel als auch Möbel aus Umzügen fachgerecht.'
   },
   {
-    question: 'Ist mein Umzug versichert?',
-    answer: 'Ja, Ihr Umzug ist versichert, da wir großen Wert auf die Sicherheit Ihres Umzugsguts legen und daher eine umfassende Versicherungspolice abgeschlossen haben, die Schäden während des Transports und der Handhabung abdeckt, sodass Sie sich keine Sorgen um mögliche Verluste oder Beschädigungen machen müssen. Es kommt fast nie zu irgendwelchen Schäden, da unser erfahrenes Team äußerst sorgfältig und professionell arbeitet.'
+    question: '🚚 Bieten Sie komplette Umzüge an?',
+    answer: 'Kleinere Umzüge übernehmen wir selbst - auf Wunsch inklusive Möbelmontage. Für größere Umzüge vermitteln wir an eine Partnerfirma.'
   },
   {
-    question: 'Bekomme ich Umzugskartons & Packmaterial?',
-    answer: 'Natürlich, wir liefern Ihnen gerne Umzugskartons und das benötigte Packmaterial, wenn Sie es benötigen.'
+    question: '🍳 Bieten Sie auch Umzugsküchen an?',
+    answer: 'Ja, wir übernehmen den Abbau und Wiederaufbau von Küchen inklusive Anpassungen.'
   },
   {
-    question: 'Wird auch ein Einpack- & Auspack-Service angeboten?',
-    answer: 'Ja, auf Wunsch bieten wir einen Einpack- und Auspack-Service an, bei dem wir die Umzugskisten für Sie ein- und auspacken können.'
+    question: '🔧 Verkaufen Sie Ersatzteile?',
+    answer: 'Nein, wir bieten keinen Verkauf von Ersatzteilen an. Wir kümmern uns um Montage, Anpassung und Reparatur.'
   },
   {
-    question: 'Wird eine Halteverbotszone eingerichtet?',
-    answer: 'Ja, wir richten bei jedem Umzug eine Halteverbotszone ein, um sicherzustellen, dass Ihr Umzug reibungslos und ohne Verzögerungen durchgeführt werden kann. In einigen Fällen ist die Einrichtung einer Halteverbotszone möglicherweise nicht erforderlich.'
+    question: '🔩 Welche Reparaturen bieten Sie an?',
+    answer: 'Wir führen kleinere Reparaturen durch, z. B. das Ausrichten von Türen oder das Beheben von Macken.'
   },
   {
-    question: 'Welche Vorteile habe ich bei Handwerker & Montage Hundsbuscher?',
-    answer: 'Mit Handwerker & Montage Hundsbuscher sind Sie bestens aufgehoben. Wir planen Ihren Umzug strukturiert, arbeiten sorgfaeltig und setzen alles termingerecht um. Sie profitieren von transparenter Beratung, fairen Angeboten und einem erfahrenen Team. Selbstverstaendlich ist Ihr Umzugsgut waehrend des Einsatzes versichert. Unser Ziel: ein reibungsloser Umzug ohne Stress.'
+    question: '🛋️ Können Möbel zur Aufbereitung abgeholt werden?',
+    answer: 'Ja, auf Wunsch holen wir Möbel ab und bereiten sie fachgerecht auf (z. B. schleifen und lackieren).'
+  },
+  {
+    question: '📦 Bieten Sie auch Entrümpelungen an?',
+    answer: 'Ja, wir entrümpeln Wohnungen, Keller und Häuser. Für größere Projekte stellen wir zusätzliche Teams bereit.'
   }
 ];
 

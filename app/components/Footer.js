@@ -25,17 +25,14 @@ export default function Footer() {
           <Grid size={{ xs: 12, md: 3 }}>
             <Box sx={{ mb: 4 }}>
               <Typography sx={{ fontSize: '1.48rem', fontWeight: 800, color: '#0453ad', mb: 0.2, letterSpacing: '-0.01em', lineHeight: 1.2 }}>
-                Handwerker & Montage
+                Handwerk & Montage
               </Typography>
               <Typography sx={{ fontSize: '1.12rem', fontWeight: 800, color: '#0f172a', mb: 0.3, lineHeight: 1.2 }}>
-                Hundsbuscher
-              </Typography>
-              <Typography sx={{ fontSize: '0.75rem', letterSpacing: 1, fontWeight: 700, color: '#0f172a', opacity: 0.82 }}>
-                REINIGUNG & UMZUGSERVICE
+                Hundsbüscher
               </Typography>
             </Box>
             <Typography sx={{ fontSize: '0.75rem', color: '#0f172a', mt: 4, opacity: 0.86 }}>
-              © 2026 Handwerker & Montage Hundsbuscher
+              © 2026 Handwerk & Montage Hundsbüscher
             </Typography>
           </Grid>
 
@@ -79,22 +76,19 @@ export default function Footer() {
             </Box>
           </Grid>
 
-          {/* Services: Reinigung */}
+          {/* Services: Montage */}
           <Grid size={{ xs: 12, sm: 6, md: 2 }}>
             <Typography sx={{ fontSize: '0.95rem', fontWeight: 800, color: '#0f172a', mb: 2 }}>
-              Reinigungsservice
+              Montageservice
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.8 }}>
               {[
-                'Bauendreinigung',
-                'Fassadenreinigung',
-                'Büroreinigung',
-                'Fensterreinigung',
-                'Behördenreinigung',
-                'Spezialreinigung',
-                'PV-Anlagen Reinigung',
-                'Sportstudio Reinigung',
-                'Gewerberereinigung'
+                'Küchenmontage & Umzugsküchen',
+                'Möbelmontage (neu & Umzug)',
+                'Küchenanpassung & Änderungen',
+                'Möbelreparatur & Austausch',
+                'Möbelaufbereitung',
+                'Entrümpelung'
               ].map((item, idx) => (
                 <Typography key={idx} sx={{ fontSize: '0.85rem', color: '#0f172a', opacity: 0.9, lineHeight: 1.6 }}>
                   {item}
@@ -110,15 +104,9 @@ export default function Footer() {
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.8 }}>
               {[
-                'Spezialumzüge',
-                'Entrümpelung',
-                'Fernumzüge',
-                'Büroumzüge',
-                'Studentenumzüge',
-                'Seniorenumzüge',
-                'Behördenumzüge',
-                'Gewerbeumzüge',
-                'Private Umzüge'
+                'Privatumzug',
+                'Firmenumzug',
+                'Fernumzug'
               ].map((item, idx) => (
                 <Typography key={idx} sx={{ fontSize: '0.85rem', color: '#0f172a', opacity: 0.9, lineHeight: 1.6 }}>
                   {item}
@@ -131,7 +119,7 @@ export default function Footer() {
           <Grid size={{ xs: 12, md: 2 }}>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
               {[
-                { label: 'Reinigung', href: '#reinigung' },
+                { label: 'Montageservice', href: '#reinigung' },
                 { label: 'Umzüge', href: '#umzuege' },
                 { label: 'Über uns', href: '#wir' },
                 { label: 'Bewertungen', href: '#bewertungen' },

@@ -9,7 +9,7 @@ export default function ContactForm() {
     phone: '',
     email: '',
     area: '',
-    cleaning: '',
+    montage: '',
     moving: '',
     notes: '',
     agree: false
@@ -29,7 +29,7 @@ export default function ContactForm() {
       `Telefon: ${form.phone || '-'}`,
       `E-Mail: ${form.email || '-'}`,
       `Fläche (qm): ${form.area || '-'}`,
-      `Reinigungsservice: ${form.cleaning || '-'}`,
+      `Montageservice: ${form.montage || '-'}`,
       `Umzugsservice: ${form.moving || '-'}`,
       `Weitere Infos: ${form.notes || '-'}`,
     ];
@@ -160,12 +160,12 @@ export default function ContactForm() {
             <Grid size={{ xs: 12, md: 6 }}>
               <Box sx={{ mb: 1 }}>
                 <Typography sx={{ fontSize: '0.95rem', fontWeight: 600, color: '#0f172a', mb: 1.5 }}>
-                  Reinigungsservice
+                  Montageservice
                 </Typography>
               </Box>
               <Select
-                name="cleaning"
-                value={form.cleaning}
+                name="montage"
+                value={form.montage}
                 onChange={handleChange}
                 fullWidth
                 variant="standard"
@@ -178,11 +178,12 @@ export default function ContactForm() {
                 }}
               >
                 <MenuItem value="">Auswählen...</MenuItem>
-                <MenuItem value="fensterreinigung">Fensterreinigung</MenuItem>
-                <MenuItem value="grundreinigung">Grundreinigung</MenuItem>
-                <MenuItem value="unterhaltsreinigung">Unterhaltsreinigung</MenuItem>
-                <MenuItem value="pv-reinigung">PV-Anlage Reinigung</MenuItem>
-                <MenuItem value="hochdruckreinigung">Hochdruckreinigung</MenuItem>
+                <MenuItem value="küchenmontage">KüchenMontage</MenuItem>
+                <MenuItem value="möbelmontage">Möbelmontage</MenuItem>
+                <MenuItem value="küchenanpassung">Küchenanpassung & Änderungen</MenuItem>
+                <MenuItem value="möbelreparatur">Möbelreparatur & Austausch</MenuItem>
+                <MenuItem value="möbelaufbereitung">Möbelaufbereitung</MenuItem>
+                <MenuItem value="entrümpelung">Entrümpelung</MenuItem>
               </Select>
             </Grid>
             <Grid size={{ xs: 12, md: 6 }}>
@@ -209,8 +210,6 @@ export default function ContactForm() {
                 <MenuItem value="privatumzug">Privatumzug</MenuItem>
                 <MenuItem value="bueroumzug">Büroumzug</MenuItem>
                 <MenuItem value="fernumzug">Fernumzug</MenuItem>
-                <MenuItem value="moebellift">Möbellift</MenuItem>
-                <MenuItem value="packservice">Pack-Service</MenuItem>
               </Select>
             </Grid>
 

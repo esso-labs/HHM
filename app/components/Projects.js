@@ -9,27 +9,39 @@ const MotionBox = motion.create(Box);
 const projects = [
   {
     number: '1',
-    title: 'Freie Bahn für das Sonnelicht',
-    description: 'Unsere gründliche PV-Anlage Reinigung sorgt für maximale Energieeffizienz und optimalen Schutz.',
+    title: 'Möbelmontage',
+    description: 'Aufbau kompletter Möbel - schnell, sauber und passgenau montiert.',
     image: '/img/anlage.jpg'
   },
   {
     number: '2',
-    title: 'Entrümpelungen',
-    description: 'Eine komplette Entrümpelung in Rekordzeit – wir schaffen Platz, wo Chaos war.',
+    title: 'Küchenmontage',
+    description: 'Fachgerechte Montage einer Küche inklusive Anpassungen und exakter Ausrichtung.',
     image: '/img/coutch.jpg'
   },
   {
     number: '3',
-    title: 'Glänzende Sanitärräume',
-    description: 'Strahlende Sauberkeit in jedem Winkel – unsere Sanitärraum Reinigung setzt neue Hygienestandards.',
+    title: 'Küchenanpassung',
+    description: 'Individuelle Anpassung einer bestehenden Küche für optimale Nutzung des Raumes.',
     image: '/img/kuche.jpg'
   },
   {
     number: '4',
-    title: 'Starke Umzugsfachmänner',
-    description: 'Unser Team meisterte den Umzug schnell, stressfrei und professionell – Kundenzufriedenheit garantiert.',
+    title: 'Möbelreparatur',
+    description: 'Ausrichten von Türen und Beseitigung von Gebrauchsspuren für ein sauberes Ergebnis.',
     image: '/img/umzug.jpg'
+  },
+  {
+    number: '5',
+    title: 'Möbelaufbereitung',
+    description: 'Aufarbeitung alter Möbel durch Schleifen und Oberflächenbehandlung.',
+    image: '/img/anlage.jpg'
+  },
+  {
+    number: '6',
+    title: 'Entrümpelung',
+    description: 'Saubere und strukturierte Entrümpelung von Wohn- und Lagerräumen.',
+    image: '/img/coutch.jpg'
   }
 ];
 
@@ -47,7 +59,7 @@ export default function Projects() {
         >
           <Box sx={{ width: 12, height: 12, borderRadius: '50%', background: '#0765d4', boxShadow: '0 0 18px rgba(7, 101, 212, 0.45)' }} />
           <Typography sx={{ fontSize: '0.9rem', fontWeight: '700', letterSpacing: 1, color: '#0f172a' }}>
-            UNSERE PROJEKTE
+            Einblicke in unsere Arbeit
           </Typography>
         </MotionBox>
 
@@ -68,7 +80,9 @@ export default function Projects() {
               mb: 2
             }}
           >
-            Unsere Erfolgsgeschichten – Effiziente Lösungen und zufriedene Kunden durch professionelle Dienstleistungen im Münsterland und in ganz Deutschland
+            Ob Möbel- oder Küchenmontage - wir setzen jedes Projekt präzise und sauber um.
+            <br />
+            Hier sehen Sie ausgewählte Arbeiten aus unserem Alltag.
           </Typography>
         </MotionBox>
 
