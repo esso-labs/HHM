@@ -95,18 +95,195 @@ export default function Navbar() {
           top: { xs: 12, md: 22 },
         }}>
         <Toolbar sx={{ minHeight: { xs: 74, md: 82 }, px: { xs: 1.4, md: 2.2 } }}>
+          <style>{`
+            @keyframes hammerSwing {
+              0%   { opacity: 1; transform: rotate(0deg); }
+              20%  { transform: rotate(-40deg); }
+              45%  { transform: rotate(18deg); }
+              65%  { transform: rotate(-22deg); }
+              82%  { transform: rotate(10deg); }
+              100% { opacity: 1; transform: rotate(0deg); }
+            }
+            @keyframes screwSpin {
+              0%   { opacity: 1; transform: rotate(0deg); }
+              100% { opacity: 1; transform: rotate(360deg); }
+            }
+            .brand-hover .hammer-icon,
+            .brand-hover .screw-icon {
+              opacity: 0;
+              transition: opacity 0.15s ease;
+            }
+            .brand-hover:hover .hammer-icon {
+              animation: hammerSwing 0.75s ease forwards;
+            }
+            .brand-hover:hover .screw-icon {
+              animation: screwSpin 0.85s linear forwards;
+            }
+          `}</style>
+
+          {/* Brand: House Icon + Text */}
           <Box
-            component="img"
-            src="/img/logo.png"
-            alt="Logo"
-            sx={{
-              height: { xs: 78, md: 58 },
-              cursor: 'pointer',
-              marginRight: 2,
-              mt: { xs: 0, md: 0.2 }
-            }}
+            className="brand-hover"
             onClick={() => scrollToSection('start')}
-          />
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: { xs: 0.8, md: 1 },
+              cursor: 'pointer',
+              mr: { xs: 1, md: 2 },
+              flexShrink: 0,
+            }}
+          >
+            {/* CSS House Icon */}
+            <Box
+              sx={{
+                position: 'relative',
+                width: { xs: 30, md: 34 },
+                height: { xs: 30, md: 34 },
+                flexShrink: 0,
+                filter: 'drop-shadow(0 2px 8px rgba(255,255,255,0.45))',
+              }}
+            >
+              {/* Roof triangle */}
+              <Box sx={{
+                position: 'absolute',
+                top: 0,
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: 0,
+                height: 0,
+                borderLeft: { xs: '15px solid transparent', md: '17px solid transparent' },
+                borderRight: { xs: '15px solid transparent', md: '17px solid transparent' },
+                borderBottom: { xs: '16px solid white', md: '18px solid white' },
+              }} />
+              {/* House body */}
+              <Box sx={{
+                position: 'absolute',
+                bottom: 0,
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: { xs: 20, md: 22 },
+                height: { xs: 16, md: 18 },
+                backgroundColor: 'white',
+                borderRadius: '1px',
+              }} />
+              {/* Door */}
+              <Box sx={{
+                position: 'absolute',
+                bottom: 0,
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: { xs: 6, md: 7 },
+                height: { xs: 8, md: 9 },
+                backgroundColor: 'rgba(7, 101, 212, 0.85)',
+                borderRadius: '2px 2px 0 0',
+              }} />
+            </Box>
+
+            {/* Brand text */}
+            <Box sx={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15 }}>
+              <Box component="span" sx={{
+                fontSize: { xs: '0.78rem', md: '0.88rem' },
+                fontWeight: 800,
+                color: '#ffffff',
+                letterSpacing: '0.02em',
+                whiteSpace: 'nowrap',
+              }}>
+                Montage &amp; Service
+              </Box>
+              <Box component="span" sx={{
+                fontSize: { xs: '0.65rem', md: '0.72rem' },
+                fontWeight: 500,
+                color: 'rgba(255,255,255,0.78)',
+                letterSpacing: '0.04em',
+                whiteSpace: 'nowrap',
+              }}>
+                Hundsbüscher
+              </Box>
+            </Box>
+
+            {/* Hammer Icon – swings on hover */}
+            <Box
+              className="hammer-icon"
+              sx={{
+                position: 'relative',
+                width: { xs: 16, md: 18 },
+                height: { xs: 20, md: 22 },
+                flexShrink: 0,
+                transformOrigin: 'bottom center',
+                display: { xs: 'none', md: 'block' },
+              }}
+            >
+              {/* Head */}
+              <Box sx={{
+                position: 'absolute',
+                top: 0,
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: { md: 14 },
+                height: { md: 7 },
+                backgroundColor: 'white',
+                borderRadius: '2px',
+              }} />
+              {/* Handle */}
+              <Box sx={{
+                position: 'absolute',
+                bottom: 0,
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: { md: 3 },
+                height: { md: 14 },
+                backgroundColor: 'rgba(255,255,255,0.85)',
+                borderRadius: '2px',
+              }} />
+            </Box>
+
+            {/* Screwdriver Icon – spins on hover */}
+            <Box
+              className="screw-icon"
+              sx={{
+                position: 'relative',
+                width: { xs: 14, md: 16 },
+                height: { xs: 20, md: 24 },
+                flexShrink: 0,
+                transformOrigin: 'center',
+                display: { xs: 'none', md: 'block' },
+              }}
+            >
+              {/* Handle */}
+              <Box sx={{
+                position: 'absolute',
+                top: 0,
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: { md: 10 },
+                height: { md: 8 },
+                backgroundColor: 'white',
+                borderRadius: '3px',
+              }} />
+              {/* Shaft */}
+              <Box sx={{
+                position: 'absolute',
+                top: { md: 8 },
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: { md: 3 },
+                height: { md: 12 },
+                backgroundColor: 'rgba(255,255,255,0.8)',
+              }} />
+              {/* Tip */}
+              <Box sx={{
+                position: 'absolute',
+                bottom: 0,
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: { md: 7 },
+                height: { md: 2 },
+                backgroundColor: 'white',
+                borderRadius: '1px',
+              }} />
+            </Box>
+          </Box>
 
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1.2, flex: 1, justifyContent: 'right', alignItems: 'center' }}>
             {sections.map((section) => (
