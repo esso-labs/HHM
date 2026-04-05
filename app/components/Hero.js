@@ -1,32 +1,18 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Box, Container, Typography, Button, Stack } from '@mui/material';
-import { motion, useMotionValue, useTransform, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { motion, useMotionValue, useTransform, useReducedMotion } from 'framer-motion';
 
 export default function Hero() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-  const [textIndex, setTextIndex] = useState(0);
   const shouldReduceMotion = useReducedMotion();
 
   const rotateX = useTransform(mouseY, [-300, 300], [8, -8]);
   const rotateY = useTransform(mouseX, [-300, 300], [-8, 8]);
 
-  const texts = [
-    'Professionell, pünktlich und in ganz Deutschland für dich unterwegs.',
-    'Jetzt unverbindlich anfragen und noch heute ein Angebot erhalten.',
-    'Handwerker & Montage Hundsbuscher: Ihr Partner für Reinigung und Umzug.',
-  ];
-
   const highlights = ['Schnelle Terminvergabe', 'Transparente Preise', 'Fester Ansprechpartner'];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTextIndex((prev) => (prev + 1) % texts.length);
-    }, 6200);
-    return () => clearInterval(interval);
-  }, [texts.length]);
 
   const handleMouseMove = (event) => {
     if (shouldReduceMotion) return;
@@ -141,9 +127,9 @@ export default function Hero() {
               textWrap: 'balance',
             }}
           >
-            Foto senden. Angebot bekommen. Fertig.
+            
             <Box component="span" sx={{ color: '#0765d4', display: 'block' }}>
-              Ihr Experte für Montagearbeiten rund ums Zuhause.
+              Professionelle Möbelmontage pünktlich und in ganz Deutschland für dich unterwegs.
             </Box>
           </Typography>
         </motion.div>
@@ -172,34 +158,47 @@ export default function Hero() {
           ))}
         </Stack>
 
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={textIndex}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Typography
-              variant="body1"
-              sx={{
-                mb: 4,
-                maxWidth: 760,
-                mx: 'auto',
-                fontSize: { xs: 'clamp(1rem, 4.5vw, 1.12rem)', md: '1.18rem' },
-                fontWeight: 500,
-                color: 'rgba(15, 23, 42, 0.9)',
-                textWrap: 'pretty',
-                minHeight: { xs: 48, md: 68, lg: 52 },
-                '@media (min-width: 900px) and (max-height: 680px)': {
-                  minHeight: '50px',
-                },
-              }}
-            >
-              {texts[textIndex]}
-            </Typography>
-          </motion.div>
-        </AnimatePresence>
+        <Typography
+          variant="h5"
+          component="p"
+          sx={{
+            mt: 3,
+            fontWeight: 800,
+            fontSize: { xs: '1.25rem', md: '1.6rem' },
+            color: '#0f172a',
+            letterSpacing: '-0.01em',
+          }}
+        >
+          Montage &amp; Service Hundsbüscher.
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            mt: 1.5,
+            maxWidth: 680,
+            mx: 'auto',
+            fontSize: { xs: 'clamp(1rem, 4.5vw, 1.12rem)', md: '1.18rem' },
+            fontWeight: 500,
+            color: 'rgba(15, 23, 42, 0.9)',
+            textWrap: 'pretty',
+          }}
+        >
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            mt: 1,
+            mb: 4,
+            maxWidth: 680,
+            mx: 'auto',
+            fontSize: { xs: 'clamp(1rem, 4.5vw, 1.12rem)', md: '1.18rem' },
+            fontWeight: 500,
+            color: 'rgba(15, 23, 42, 0.9)',
+            textWrap: 'pretty',
+          }}
+        >
+          Jetzt unverbindlich anfragen und noch heute ein Angebot erhalten.
+        </Typography>
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}

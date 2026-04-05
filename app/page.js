@@ -7,7 +7,6 @@ import UmzuegeSection from './components/UmzuegeSection';
 import AboutSection from './components/AboutSection';
 import Reviews from './components/Reviews';
 import Kunden from './components/Clients';
-import Projects from './components/Projects';
 import FAQSection from './components/FAQSection';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
@@ -25,7 +24,6 @@ export default function Home() {
       <AboutSection />
       <Reviews />
       <Kunden />
-      <Projects />
       <FAQSection />
       <ContactForm />
       <Footer />
