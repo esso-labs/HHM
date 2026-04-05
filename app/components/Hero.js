@@ -49,12 +49,21 @@ export default function Hero() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: '#0f172a',
-        minHeight: { xs: '84vh', md: '92vh' },
-        pt: { xs: 16, md: 20 },
-        pb: { xs: 8, md: 12 },
+        minHeight: { xs: '100svh', sm: '85vh', md: '92vh', lg: '100vh' },
+        pt: { xs: 12, sm: 14, md: 20, lg: 14 },
+        pb: { xs: 6, sm: 10, md: 12, lg: 5 },
         textAlign: 'center',
         position: 'relative',
         overflow: 'hidden',
+        // Nest Hub 1024×600 — landscape short screen at md breakpoint
+        '@media (min-width: 900px) and (max-height: 680px)': {
+          paddingTop: '6.5rem',
+          paddingBottom: '2rem',
+        },
+        // Samsung S8 360×740, iPhone SE 375×667 — short xs screens
+        '@media (max-width: 599px) and (max-height: 750px)': {
+          paddingBottom: '2.5rem',
+        },
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
@@ -114,7 +123,7 @@ export default function Hero() {
               fontWeight: 700,
               fontSize: { xs: '0.8rem', md: '0.87rem' },
               letterSpacing: '0.05em',
-              mb: 2.1,
+              mb: { xs: 2.1, lg: 1.2 },
             }}
           >
             Möbel- & Küchenmontage vom Profi
@@ -127,8 +136,8 @@ export default function Hero() {
               fontWeight: 800,
               mt: 2,
               letterSpacing: '-0.02em',
-              lineHeight: 1.03,
-              fontSize: { xs: '2.1rem', md: '4rem' },
+              lineHeight: { xs: 1.18, md: 1.03 },
+              fontSize: { xs: 'clamp(1.75rem, 7.5vw, 2.05rem)', sm: '2.6rem', md: '4rem' },
               textWrap: 'balance',
             }}
           >
@@ -140,9 +149,9 @@ export default function Hero() {
         </motion.div>
 
         <Stack
-          direction={{ xs: 'column', sm: 'row' }}
+          direction="row"
           spacing={1}
-          sx={{ alignItems: 'center', justifyContent: 'center', mt: 2.2, mb: 1.2 }}
+          sx={{ alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', mt: 2.2, mb: 1.2, gap: 0.8 }}
         >
           {highlights.map((item) => (
             <Box
@@ -177,11 +186,14 @@ export default function Hero() {
                 mb: 4,
                 maxWidth: 760,
                 mx: 'auto',
-                fontSize: { xs: '1.02rem', md: '1.18rem' },
+                fontSize: { xs: 'clamp(1rem, 4.5vw, 1.12rem)', md: '1.18rem' },
                 fontWeight: 500,
                 color: 'rgba(15, 23, 42, 0.9)',
                 textWrap: 'pretty',
-                minHeight: { xs: 60, md: 68 },
+                minHeight: { xs: 48, md: 68, lg: 52 },
+                '@media (min-width: 900px) and (max-height: 680px)': {
+                  minHeight: '50px',
+                },
               }}
             >
               {texts[textIndex]}
@@ -193,43 +205,45 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <Button
-            variant="contained"
-            size="large"
-            href="https://wa.me/49176475615"
-            target="_blank"
-            sx={{
-              backgroundColor: '#0765d4',
-              color: 'white',
-              '&:hover': { backgroundColor: '#0552a8' },
-              fontWeight: 700,
-              letterSpacing: '0.01em',
-              px: { xs: 3.2, md: 4 },
-              py: 1.5,
-              borderRadius: '999px',
-              boxShadow: '0 14px 32px rgba(7, 101, 212, 0.35)',
-            }}
-          >
-            Jetzt unverbindlich anfragen
-          </Button>
-          <Button
-            size="large"
-            href="#bewertungen"
-            sx={{
-              ml: { xs: 0, sm: 1.2 },
-              mt: { xs: 1.2, sm: 0 },
-              background: 'rgba(255,255,255,0.72)',
-              border: '1px solid rgba(7,101,212,0.22)',
-              color: '#0552a8',
-              fontWeight: 700,
-              px: 3.4,
-              py: 1.4,
-              borderRadius: '999px',
-              '&:hover': { background: 'rgba(255,255,255,0.9)' },
-            }}
-          >
-            Bewertungen ansehen
-          </Button>
+          <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: 'center', justifyContent: 'center', gap: 1.5 }}>
+            <Button
+              variant="contained"
+              size="large"
+              href="https://wa.me/49176475615"
+              target="_blank"
+              sx={{
+                backgroundColor: '#0765d4',
+                color: 'white',
+                '&:hover': { backgroundColor: '#0552a8' },
+                fontWeight: 700,
+                letterSpacing: '0.01em',
+                px: { xs: 3.2, md: 4, lg: 5 },
+                py: 1.5,
+                borderRadius: '999px',
+                boxShadow: '0 14px 32px rgba(7, 101, 212, 0.35)',
+                width: { xs: '100%', sm: 'auto' },
+              }}
+            >
+              Jetzt unverbindlich anfragen
+            </Button>
+            <Button
+              size="large"
+              href="#bewertungen"
+              sx={{
+                background: 'rgba(255,255,255,0.72)',
+                border: '1px solid rgba(7,101,212,0.22)',
+                color: '#0552a8',
+                fontWeight: 700,
+                px: 3.4,
+                py: 1.4,
+                borderRadius: '999px',
+                '&:hover': { background: 'rgba(255,255,255,0.9)' },
+                width: { xs: '100%', sm: 'auto' },
+              }}
+            >
+              Bewertungen ansehen
+            </Button>
+          </Box>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -239,11 +253,19 @@ export default function Hero() {
           <Box
             sx={{
               borderRadius: '18px',
-              minHeight: 170,
+              minHeight: { xs: 148, lg: 148 },
               width: { xs: 250, md: 318 },
               background: 'linear-gradient(180deg, rgba(7,101,212,0.93) 0%, rgba(4,83,173,0.95) 100%)',
-              mt: { xs: 6.2, md: 7.4 },
+              mt: { xs: 3.5, md: 7.4, lg: 2.5 },
               mx: 'auto',
+              '@media (min-width: 900px) and (max-height: 680px)': {
+                marginTop: '1.5rem',
+                minHeight: '130px',
+              },
+              '@media (max-width: 599px) and (max-height: 750px)': {
+                marginTop: '2rem',
+                minHeight: '130px',
+              },
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',

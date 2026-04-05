@@ -37,7 +37,7 @@ export default function Navbar() {
   const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
 
   const drawerContent = (
-    <Box sx={{ p: 2.2, minWidth: 290 }}>
+    <Box sx={{ p: 2.2, width: 'min(290px, 85vw)' }}>
       <IconButton onClick={handleDrawerToggle} sx={{ float: 'right', mb: 1.5, color: '#ffffff' }}>
         <CloseIcon />
       </IconButton>
@@ -89,10 +89,10 @@ export default function Navbar() {
           border: '1px solid rgba(255,255,255,0.22)',
           boxShadow: '0 16px 35px rgba(6, 33, 77, 0.28)',
           borderRadius: '18px',
-          maxWidth: { xs: '94%', md: '74%' },
+          maxWidth: { xs: '94%', sm: '88%', md: '74%', lg: '68%', xl: '56%' },
           left: '50%',
           transform: 'translateX(-50%)',
-          top: { xs: 12, md: 22 },
+          top: { xs: 12, md: 22, lg: 18 },
         }}>
         <Toolbar sx={{ minHeight: { xs: 74, md: 82 }, px: { xs: 1.4, md: 2.2 } }}>
           <style>{`

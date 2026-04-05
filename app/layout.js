@@ -23,6 +23,12 @@ export const metadata = {
   keywords: "Handwerker und Montage Hundsbuscher, Umzüge, Reinigungsservice, PV-Reinigung, Fensterreinigung, Entrümpelung",
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#0765d4',
+};
+
 import ThemeProviderWrapper from './components/ThemeProviderWrapper';
 
 export default function RootLayout({ children }) {

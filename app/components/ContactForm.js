@@ -43,11 +43,11 @@ export default function ContactForm() {
 
   return (
     <Box id="contact" className="section" sx={{ py: { xs: 7, md: 11 }, background: 'linear-gradient(180deg, #f7fbff 0%, #edf5ff 100%)' }}>
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         {/* Title */}
         <Typography
           sx={{
-            fontSize: { xs: '1.8rem', md: '2.2rem' },
+            fontSize: { xs: '1.8rem', md: '2.2rem', lg: '2.8rem' },
             fontWeight: 800,
             color: '#0f172a',
             mb: 1.2
@@ -72,7 +72,7 @@ export default function ContactForm() {
         >
           <Grid container spacing={{ xs: 3, md: 4 }}>
             {/* Row 1: Name & Phone */}
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid size={{ xs: 12, sm: 6, md: 6 }}>
               <Box sx={{ mb: 1 }}>
                 <Typography sx={{ fontSize: '0.95rem', fontWeight: 600, color: '#0f172a', mb: 1.5 }}>
                   Vorname oder Firma
@@ -92,7 +92,7 @@ export default function ContactForm() {
                 }}
               />
             </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid size={{ xs: 12, sm: 6, md: 6 }}>
               <Box sx={{ mb: 1 }}>
                 <Typography sx={{ fontSize: '0.95rem', fontWeight: 600, color: '#0f172a', mb: 1.5 }}>
                   Telefonnummer *
@@ -114,7 +114,7 @@ export default function ContactForm() {
             </Grid>
 
             {/* Row 2: Email & Area */}
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid size={{ xs: 12, sm: 6, md: 6 }}>
               <Box sx={{ mb: 1 }}>
                 <Typography sx={{ fontSize: '0.95rem', fontWeight: 600, color: '#0f172a', mb: 1.5 }}>
                   E-Mail *
@@ -135,7 +135,7 @@ export default function ContactForm() {
                 }}
               />
             </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid size={{ xs: 12, sm: 6, md: 6 }}>
               <Box sx={{ mb: 1 }}>
                 <Typography sx={{ fontSize: '0.95rem', fontWeight: 600, color: '#0f172a', mb: 1.5 }}>
                   Fläche in qm
@@ -157,7 +157,7 @@ export default function ContactForm() {
             </Grid>
 
             {/* Row 3: Service Selects */}
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid size={{ xs: 12, sm: 6, md: 6 }}>
               <Box sx={{ mb: 1 }}>
                 <Typography sx={{ fontSize: '0.95rem', fontWeight: 600, color: '#0f172a', mb: 1.5 }}>
                   Montageservice
@@ -186,7 +186,7 @@ export default function ContactForm() {
                 <MenuItem value="entrümpelung">Entrümpelung</MenuItem>
               </Select>
             </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid size={{ xs: 12, sm: 6, md: 6 }}>
               <Box sx={{ mb: 1 }}>
                 <Typography sx={{ fontSize: '0.95rem', fontWeight: 600, color: '#0f172a', mb: 1.5 }}>
                   Umzugsservice
@@ -272,19 +272,21 @@ export default function ContactForm() {
 
             {/* Row 6: Button */}
             <Grid size={{ xs: 12 }}>
-              <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+              <Box sx={{ display: 'flex', justifyContent: { xs: 'stretch', md: 'flex-end' } }}>
                 <Button
                   type="submit"
                   variant="contained"
                   disabled={isSubmitDisabled}
+                  fullWidth
                   sx={{
                     background: '#0765d4',
                     color: '#ffffff',
-                    paddingX: 6,
+                    paddingX: { xs: 3, md: 6 },
                     paddingY: 1.5,
                     fontSize: '1rem',
                     fontWeight: 700,
                     borderRadius: '999px',
+                    maxWidth: { xs: '100%', md: 'fit-content' },
                     '&:hover': {
                       background: '#0552a8',
                       transform: 'translateY(-2px)',

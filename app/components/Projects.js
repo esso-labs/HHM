@@ -87,7 +87,7 @@ export default function Projects() {
         </MotionBox>
 
         {/* Projects Grid */}
-        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)' }, gap: { xs: 3, md: 4 } }}>
+        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }, gap: { xs: 3, md: 4 } }}>
           {projects.map((project, idx) => (
             <Box key={idx}>
               <MotionBox
@@ -122,7 +122,7 @@ export default function Projects() {
                   alt={project.title}
                   sx={{
                     width: '100%',
-                    height: { xs: '250px', md: '300px' },
+                    height: { xs: '180px', sm: '220px', md: '280px', lg: '240px', xl: '280px' },
                     objectFit: 'cover',
                     display: 'block'
                   }}
@@ -145,7 +145,7 @@ export default function Projects() {
                     <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 2, mb: 2 }}>
                       <Typography
                         sx={{
-                          fontSize: { xs: '3rem', md: '4rem' },
+                          fontSize: { xs: '3rem', md: '4rem', lg: '3rem' },
                           fontWeight: 700,
                           lineHeight: 1,
                           color: '#9fcfff'
@@ -155,7 +155,7 @@ export default function Projects() {
                       </Typography>
                       <Typography
                         sx={{
-                          fontSize: { xs: '1.1rem', md: '1.3rem' },
+                          fontSize: { xs: '1.1rem', md: '1.3rem', lg: '1.1rem' },
                           fontWeight: 700,
                           lineHeight: 1.3,
                           color: '#ffffff',

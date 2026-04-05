@@ -51,7 +51,7 @@ export default function FAQSection() {
 
   return (
     <Box id="faq" className="section" sx={{ py: { xs: 6, md: 10 }, background: '#ffffff' }}>
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         {/* Header */}
         <MotionBox
           initial={{ opacity: 0, y: 20 }}
@@ -72,11 +72,11 @@ export default function FAQSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
           viewport={{ once: true }}
-          sx={{ mb: 8 }}
+          sx={{ mb: { xs: 4, md: 8 } }}
         >
           <Typography 
             sx={{ 
-              fontSize: { xs: '1.8rem', md: '2.5rem' },
+              fontSize: { xs: '1.8rem', md: '2.5rem', lg: '3.2rem' },
               fontWeight: 700,
               lineHeight: 1.3,
               color: '#0f172a',

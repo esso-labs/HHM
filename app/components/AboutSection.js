@@ -19,14 +19,14 @@ export default function AboutSection() {
         overflow: 'hidden'
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         {/* Header */}
         <MotionBox
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          sx={{ mb: 8, display: 'flex', alignItems: 'center', gap: 1.5 }}
+          sx={{ mb: { xs: 4, md: 8 }, display: 'flex', alignItems: 'center', gap: 1.5 }}
         >
           <Box sx={{ width: 8, height: 8, borderRadius: '50%', background: '#ffffff' }} />
           <Typography sx={{ fontSize: '0.85rem', fontWeight: '700', letterSpacing: 1.5, color: '#ffffff' }}>
@@ -34,7 +34,7 @@ export default function AboutSection() {
           </Typography>
         </MotionBox>
 
-        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: { xs: 4, md: 6 }, alignItems: 'flex-start' }}>
+        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr' }, gap: { xs: 4, md: 6 }, alignItems: 'flex-start' }}>
           {/* Left (50%): Large H1 Headline */}
           <Box>
             <MotionBox
@@ -47,10 +47,11 @@ export default function AboutSection() {
               <Typography
                 component="h1"
                 sx={{
-                  fontSize: { xs: '2.5rem', md: '3.5rem', lg: '4rem' },
+                  fontSize: { xs: 'clamp(2rem, 8.4vw, 2.4rem)', sm: '3rem', md: '3.5rem', lg: '4rem', xl: '5rem' },
                   fontWeight: 700,
                   lineHeight: 1.15,
                   color: '#ffffff',
+                  textWrap: 'balance',
                   transition: 'all 0.3s ease',
                   cursor: 'pointer',
                   '&:hover': {

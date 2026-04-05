@@ -50,7 +50,7 @@ export default function UmzuegeSection() {
           <Typography sx={{ fontSize: '0.88rem', fontWeight: 800, letterSpacing: '0.12em', color: '#0765d4', mb: 1.4 }}>
             UMZUGSSERVICE
           </Typography>
-          <Typography sx={{ fontSize: { xs: '1.85rem', md: '2.8rem' }, fontWeight: 800, color: '#0f172a', lineHeight: 1.16, mb: 1.2 }}>
+          <Typography sx={{ fontSize: { xs: 'clamp(1.65rem, 7vw, 1.9rem)', md: '2.8rem', lg: '3.4rem' }, fontWeight: 800, color: '#0f172a', lineHeight: 1.16, mb: 1.2, textWrap: 'balance' }}>
             Zuverlässige Unterstützung bei Umzügen und Transporten.
           </Typography>
           <Typography sx={{ maxWidth: 760, mx: 'auto', color: 'rgba(15,23,42,0.78)', fontSize: { xs: '1rem', md: '1.08rem' } }}>
@@ -64,7 +64,7 @@ export default function UmzuegeSection() {
 
         <Grid container spacing={{ xs: 2.5, md: 3.2 }}>
           {moveServices.map((service, idx) => (
-            <Grid size={{ xs: 12, md: 4 }} key={service.title}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }} key={service.title}>
               <MotionBox
                 initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ export default function UmzuegeSection() {
                   boxShadow: '0 14px 36px rgba(8, 38, 84, 0.12)',
                 }}
               >
-                <Box sx={{ position: 'relative', height: { xs: 220, md: 240 } }}>
+                <Box sx={{ position: 'relative', height: { xs: 220, sm: 230, md: 240 } }}>
                   <Box
                     component="img"
                     src={service.image}

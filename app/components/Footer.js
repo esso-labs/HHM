@@ -2,11 +2,12 @@
 
 import React from 'react';
 import { Box, Container, Typography, Button, Grid, Link } from '@mui/material';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 
 const MotionBox = motion.create(Box);
 
 export default function Footer() {
+  const shouldReduceMotion = useReducedMotion();
   return (
     <Box
       component="footer"
@@ -22,7 +23,7 @@ export default function Footer() {
         {/* Main Footer Content */}
         <Grid container spacing={{ xs: 4, md: 6 }} sx={{ mb: 6 }}>
           {/* Left: Logo Section */}
-          <Grid size={{ xs: 12, md: 3 }}>
+          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
             <Box sx={{ mb: 4 }}>
               <Typography sx={{ fontSize: '1.48rem', fontWeight: 800, color: '#0453ad', mb: 0.2, letterSpacing: '-0.01em', lineHeight: 1.2 }}>
                 Handwerk & Montage
@@ -37,7 +38,7 @@ export default function Footer() {
           </Grid>
 
           {/* Center: CTA & Contact */}
-          <Grid size={{ xs: 12, md: 2 }}>
+          <Grid size={{ xs: 12, sm: 6, md: 2 }}>
             <Box sx={{ mb: 4 }}>
               <Button
                 href="#contact"
@@ -116,7 +117,7 @@ export default function Footer() {
           </Grid>
 
           {/* Right: Navigation Links */}
-          <Grid size={{ xs: 12, md: 2 }}>
+          <Grid size={{ xs: 12, sm: 6, md: 2 }}>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
               {[
                 { label: 'Montageservice', href: '#reinigung' },
@@ -163,8 +164,8 @@ export default function Footer() {
           }}
         >
           <MotionBox
-            animate={{ x: ['-50%', '0%'] }}
-            transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
+            animate={shouldReduceMotion ? {} : { x: ['-50%', '0%'] }}
+            transition={shouldReduceMotion ? {} : { duration: 15, repeat: Infinity, ease: 'linear' }}
             sx={{
               display: 'flex',
               gap: 2,

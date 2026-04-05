@@ -71,7 +71,7 @@ export default function ReinigungSection() {
           <Typography sx={{ fontSize: '0.88rem', fontWeight: 800, letterSpacing: '0.12em', color: '#a8ceff', mb: 1.4 }}>
             LEISTUNGEN
           </Typography>
-          <Typography sx={{ fontSize: { xs: '1.85rem', md: '2.8rem' }, fontWeight: 800, color: '#ffffff', lineHeight: 1.16, mb: 1.4 }}>
+          <Typography sx={{ fontSize: { xs: 'clamp(1.65rem, 7vw, 1.9rem)', md: '2.8rem', lg: '3.4rem' }, fontWeight: 800, color: '#ffffff', lineHeight: 1.16, mb: 1.4, textWrap: 'balance' }}>
             Alles rund um Möbel- & Küchenmontage
           </Typography>
           <Typography sx={{ maxWidth: 800, mx: 'auto', color: 'rgba(255,255,255,0.86)', fontSize: { xs: '1rem', md: '1.1rem' } }}>
@@ -101,7 +101,7 @@ export default function ReinigungSection() {
                   component="img"
                   src={s.image}
                   alt={s.title}
-                  sx={{ width: '100%', height: 210, objectFit: 'cover' }}
+                  sx={{ width: '100%', height: { xs: 175, md: 210, lg: 230, xl: 260 }, objectFit: 'cover' }}
                 />
                 <Box sx={{ p: { xs: 2.3, md: 2.7 } }}>
                   <Typography sx={{ fontSize: { xs: '1.18rem', md: '1.34rem' }, fontWeight: 800, color: '#0f172a', mb: 1 }}>
